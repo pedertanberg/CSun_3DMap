@@ -1,1 +1,0 @@
-import{L as r,al as e}from"./index.347f2ee6.js";function o(t){return{origin:"portal-item",url:r(t.itemUrl),portal:t.portal||e.getDefault(),portalItem:t,readResourcePaths:[]}}function a(t){return{origin:"portal-item",messages:[],writtenProperties:[],url:t.itemUrl?r(t.itemUrl):null,portal:t.portal||e.getDefault(),portalItem:t}}export{o as e,a as o};
