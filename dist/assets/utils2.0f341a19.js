@@ -1,0 +1,5 @@
+import{od as s}from"./index.347f2ee6.js";/*!
+ * All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+ * See https://github.com/Esri/calcite-components/blob/master/LICENSE.md for details.
+ * v1.0.0-beta.97
+ */const a="CALCITE-COMBOBOX-ITEM",i="CALCITE-COMBOBOX-ITEM-GROUP",r=`${a}, ${i}`,u={removeTag:"Remove tag"};function d(e){var t,o;const n=(t=e.parentElement)===null||t===void 0?void 0:t.closest(r),c=(o=n==null?void 0:n.parentElement)===null||o===void 0?void 0:o.closest(r);return[n,c].filter(l=>l)}function b(e){var t;return((t=e.ancestors)===null||t===void 0?void 0:t.filter(o=>o.nodeName==="CALCITE-COMBOBOX-ITEM"))||[]}function C(e){return s(e.querySelectorAll("calcite-combobox-item"))}function v(e){return s(e.querySelectorAll("calcite-combobox-item")).filter(o=>o.selected).length>0}function E(e){return document.evaluate("ancestor::calcite-combobox-item | ancestor::calcite-combobox-item-group",e,null,XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,null).snapshotLength}export{r as C,u as T,C as a,a as b,i as c,d,E as e,b as g,v as h};
