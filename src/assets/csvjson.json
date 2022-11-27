@@ -1,0 +1,1397 @@
+[
+  {
+    "Navn": "FYR Bistronomi & Bar",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "Vi har sol hela dagen och sen försvinner den vid 7-8 och kommer tillbaka igen vid 9-10 :)",
+    "lat": 59.92377,
+    "lon": 10.72631
+  },
+  {
+    "Navn": "Lardoise",
+    "Sol hele dagen": "Nei",
+    "Fra": "15:00",
+    "Til": "19:00",
+    "Kommentar": "",
+    "lat": 59.9291875,
+    "lon": 10.7330625
+  },
+  {
+    "Navn": "Ristorante Prima Fila",
+    "Sol hele dagen": "Nei",
+    "Fra": "09:00",
+    "Til": "18:00",
+    "Kommentar": "",
+    "lat": 59.9133125,
+    "lon": 10.7346875
+  },
+  {
+    "Navn": "Lofthus Samvirkelag Tranen",
+    "Sol hele dagen": "Nei",
+    "Fra": "10:30",
+    "Til": "15:00",
+    "Kommentar": "",
+    "lat": 59.928186946788855,
+    "lon": 10.749090832296009
+  },
+  {
+    "Navn": "Mucho Mas",
+    "Sol hele dagen": "Nei",
+    "Fra": "12:00",
+    "Til": "20:00",
+    "Kommentar": "",
+    "lat": 59.924406974004626,
+    "lon": 10.759399014878918
+  },
+  {
+    "Navn": "Park 29",
+    "Sol hele dagen": "Nei",
+    "Fra": "09:00",
+    "Til": "20:00",
+    "Kommentar": "",
+    "lat": 59.92061074077165,
+    "lon": 10.727613091966004
+  },
+  {
+    "Navn": "Cafe Laundromat",
+    "Sol hele dagen": "Nei",
+    "Fra": "09:00",
+    "Til": "11:00",
+    "Kommentar": "Morgen",
+    "lat": 59.92583592937582,
+    "lon": 10.730504361284519
+  },
+  {
+    "Navn": "Baker Hansen Hasle Torg",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "",
+    "lat": 59.92403564550359,
+    "lon": 10.79237279991338
+  },
+  {
+    "Navn": "Baker Hansen Schultz gate",
+    "Sol hele dagen": "Nei",
+    "Fra": "14:00",
+    "Til": "20:00",
+    "Kommentar": "Dukker opp 14",
+    "lat": 59.92777140429611,
+    "lon": 10.720181261285916
+  },
+  {
+    "Navn": "Baker Hansen Sjølyst",
+    "Sol hele dagen": "Nei",
+    "Fra": "11:00",
+    "Til": "15:30",
+    "Kommentar": "Tror han",
+    "lat": 59.92095197427683,
+    "lon": 10.682186945938668
+  },
+  {
+    "Navn": "Baker Hansen Nydalen",
+    "Sol hele dagen": "Nei",
+    "Fra": "14:00",
+    "Til": "20:00",
+    "Kommentar": "Fra og med 14",
+    "lat": 59.94976382876256,
+    "lon": 10.765626376643763
+  },
+  {
+    "Navn": "Baker Hansen Vogtsgate",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "",
+    "lat": 59.93718948491685,
+    "lon": 10.766274530607554
+  },
+  {
+    "Navn": "Baker Hansen Røa",
+    "Sol hele dagen": "Nei",
+    "Fra": "14:00",
+    "Til": "20:00",
+    "Kommentar": "Fra og med 14",
+    "lat": 59.94863835138261,
+    "lon": 10.643862876642883
+  },
+  {
+    "Navn": "Anne Borgen ?",
+    "Sol hele dagen": "Nei",
+    "Fra": "12:00",
+    "Til": "15:00",
+    "Kommentar": "",
+    "lat": 59.92177479067826,
+    "lon": 10.711436461281748
+  },
+  {
+    "Navn": "Kiosken Bar",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "Noen timer etter lunch",
+    "lat": 59.912333304329465,
+    "lon": 10.73500927661777
+  },
+  {
+    "Navn": "Jørn Bertheussen Majorstuen",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "",
+    "lat": 59.91721423647828,
+    "lon": 10.752479610255367
+  },
+  {
+    "Navn": "Jørn Bertheussen Aker brygge",
+    "Sol hele dagen": "Nei",
+    "Fra": "11:00",
+    "Til": "13:00",
+    "Kommentar": "",
+    "lat": 59.91721423647829,
+    "lon": 10.752479610255367
+  },
+  {
+    "Navn": "Pokalen Aker Brygge",
+    "Sol hele dagen": "Nei",
+    "Fra": "15:00",
+    "Til": "",
+    "Kommentar": "fra 1500",
+    "lat": 59.90992546825742,
+    "lon": 10.724467061273508
+  },
+  {
+    "Navn": "Sir Winston Public House",
+    "Sol hele dagen": "Nei",
+    "Fra": "18:00",
+    "Til": "20:00",
+    "Kommentar": "",
+    "lat": 59.912232105640506,
+    "lon": 10.746482276617494
+  },
+  {
+    "Navn": "Kafe Oslo",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "Hele formiddag og kveld",
+    "lat": 59.920839794113895,
+    "lon": 10.728400045938631
+  },
+  {
+    "Navn": "Engebret Cafe",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "17:00",
+    "Kommentar": "Noen få bord som har sol enhver tid, men ikke mye etter 17",
+    "lat": 59.9091592943782,
+    "lon": 10.74199057661559
+  },
+  {
+    "Navn": "Latter",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "1-3 timer på ettermiddagen på sommer",
+    "lat": 59.911281648928764,
+    "lon": 10.726776061274313
+  },
+  {
+    "Navn": "Baker Hansen Asker",
+    "Sol hele dagen": "Nei",
+    "Fra": "12:30",
+    "Til": "",
+    "Kommentar": "Fra 12:30",
+    "lat": 59.8349732360688,
+    "lon": 10.43256221519375
+  },
+  {
+    "Navn": "Hao Restaurant",
+    "Sol hele dagen": "Nei",
+    "Fra": "13:00",
+    "Til": "17:00",
+    "Kommentar": "6 sitteplasser, 3 bord",
+    "lat": 59.92889652678652,
+    "lon": 10.71498459197142
+  },
+  {
+    "Navn": "Baker Hansen Wesselsgate",
+    "Sol hele dagen": "Nei",
+    "Fra": "09:00",
+    "Til": "",
+    "Kommentar": "fra soloppgang til etter lunch",
+    "lat": 59.9200598140109,
+    "lon": 10.743248030595561
+  },
+  {
+    "Navn": "Baker Hansen Stadion",
+    "Sol hele dagen": "Nei",
+    "Fra": "14:00",
+    "Til": "15:30",
+    "Kommentar": "",
+    "lat": 59.93032470302603,
+    "lon": 10.795653659564742
+  },
+  {
+    "Navn": "Baker Hansen Vika",
+    "Sol hele dagen": "Nei",
+    "Fra": "12:00",
+    "Til": "16:00",
+    "Kommentar": "Litt usikker",
+    "lat": 59.91479864602812,
+    "lon": 10.72900844593447
+  },
+  {
+    "Navn": "Brasserie Ouest",
+    "Sol hele dagen": "Nei",
+    "Fra": "17:30",
+    "Til": "19:30",
+    "Kommentar": "",
+    "lat": 59.91906189631676,
+    "lon": 10.706084707307166
+  },
+  {
+    "Navn": "Michaels",
+    "Sol hele dagen": "Nei",
+    "Fra": "11:00",
+    "Til": "",
+    "Kommentar": "Fra kl 11",
+    "lat": "59.923030573592484,",
+    "lon": 10.715374415255113
+  },
+  {
+    "Navn": "Herregaardskroen",
+    "Sol hele dagen": "Nei",
+    "Fra": "14:00",
+    "Til": "19:00",
+    "Kommentar": "",
+    "lat": 59.92496314729814,
+    "lon": 10.702206384571404
+  },
+  {
+    "Navn": "Cafero",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "11:30",
+    "Kommentar": "Morgen til 11-12",
+    "lat": 59.92205807832804,
+    "lon": 10.68754105333694
+  },
+  {
+    "Navn": "Nabo Restaurant",
+    "Sol hele dagen": "Nei",
+    "Fra": "15:00",
+    "Til": "21:00",
+    "Kommentar": "",
+    "lat": 59.930201195624974,
+    "lon": 10.711950291972503
+  },
+  {
+    "Navn": "Baker Hanse Kvadraturen",
+    "Sol hele dagen": "Nei",
+    "Fra": "12:00",
+    "Til": "",
+    "Kommentar": "til 14/15",
+    "lat": 59.910634194585164,
+    "lon": 10.743431745931407
+  },
+  {
+    "Navn": "Baker Hansen Løren",
+    "Sol hele dagen": "Nei",
+    "Fra": "12:00",
+    "Til": "",
+    "Kommentar": "Fra 12",
+    "lat": 59.910634194585164,
+    "lon": 10.743431745931408
+  },
+  {
+    "Navn": "Baker Hansen Vinderen",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "",
+    "lat": 59.910634194585164,
+    "lon": 10.743431745931408
+  },
+  {
+    "Navn": "Koloni Hagen Frogner",
+    "Sol hele dagen": "Nei",
+    "Fra": "14:00",
+    "Til": "16:00",
+    "Kommentar": "",
+    "lat": 59.919331223923585,
+    "lon": 10.70997946127997
+  },
+  {
+    "Navn": "Le Benjamin Bar & Bistro",
+    "Sol hele dagen": "Nei",
+    "Fra": "16:00",
+    "Til": "19:00",
+    "Kommentar": "",
+    "lat": 59.919018355211755,
+    "lon": 10.757816115252428
+  },
+  {
+    "Navn": "Beer Palace",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "17:00",
+    "Kommentar": "Fra de åpner",
+    "lat": 59.91100089030946,
+    "lon": 10.726122061274085
+  },
+  {
+    "Navn": "Tullins Cafe",
+    "Sol hele dagen": "Nei",
+    "Fra": "11:00",
+    "Til": "15-16",
+    "Kommentar": "",
+    "lat": 59.91920621528013,
+    "lon": 10.734880591964927
+  },
+  {
+    "Navn": "Seaport Restaurant",
+    "Sol hele dagen": "Nei",
+    "Fra": "12:00",
+    "Til": "",
+    "Kommentar": "",
+    "lat": 59.903114061533216,
+    "lon": 10.753259422638678
+  },
+  {
+    "Navn": "Grand Hotel Oslo",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "",
+    "lat": 59.914175294068826,
+    "lon": 10.739193384564008
+  },
+  {
+    "Navn": "Cartels Solli Plass",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "18:00",
+    "Kommentar": "Latest",
+    "lat": 59.91522837974212,
+    "lon": 10.719968653331911
+  },
+  {
+    "Navn": "Kafe Å",
+    "Sol hele dagen": "Nei",
+    "Fra": "11:00",
+    "Til": "13:00",
+    "Kommentar": "",
+    "lat": 59.91438229125295,
+    "lon": 10.7175415305916
+  },
+  {
+    "Navn": "Underbar",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "Vi har ikke mange minutter med sol og de er på ettermiddagen rundt kl 15:00.",
+    "lat": 59.91099992160457,
+    "lon": 10.726105615246698
+  },
+  {
+    "Navn": "Chat D'or",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "til kl 20",
+    "lat": 59.92162486643037,
+    "lon": 10.705273237994078
+  },
+  {
+    "Navn": "La Såda",
+    "Sol hele dagen": "Nei",
+    "Fra": "17:00",
+    "Til": "19:00",
+    "Kommentar": "",
+    "lat": 59.928498021018356,
+    "lon": 10.721781791971312
+  },
+  {
+    "Navn": "Dattera",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "18:00",
+    "Kommentar": "",
+    "lat": 59.91369277281202,
+    "lon": 10.759891369221155
+  },
+  {
+    "Navn": "AsianBox",
+    "Sol hele dagen": "Nei",
+    "Fra": "15:00",
+    "Til": "16:30",
+    "Kommentar": "",
+    "lat": 59.92558382026384,
+    "lon": 10.725129476626925
+  },
+  {
+    "Navn": "Cafe Europa",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "",
+    "lat": 59.918301205186935,
+    "lon": 10.735183253334212
+  },
+  {
+    "Navn": "Baker Hansen Bekkestua",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "14:00",
+    "Kommentar": "Formiddag til 14",
+    "lat": 59.917726111892655,
+    "lon": 10.586564769223939
+  },
+  {
+    "Navn": "Somerro",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "Begge sider av takterasse",
+    "lat": 59.915454611668146,
+    "lon": 10.719558945934992
+  },
+  {
+    "Navn": "Apertivo Oslo",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "Morning to evening",
+    "lat": 59.92078728548888,
+    "lon": 10.729514999911126
+  },
+  {
+    "Navn": "Grains Majorstuen",
+    "Sol hele dagen": "Nei",
+    "Fra": "13:30",
+    "Til": "",
+    "Kommentar": "Kommer kl 13:30",
+    "lat": 59.93057578601317,
+    "lon": 10.71572534594536
+  },
+  {
+    "Navn": "Lofthus Samvirkelag Holtet",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "21:00",
+    "Kommentar": "Forsvinner 2030-21",
+    "lat": 59.88222168882702,
+    "lon": 10.78411354591175
+  },
+  {
+    "Navn": "Bølgen & Moi Gimle",
+    "Sol hele dagen": "Nei",
+    "Fra": "13:00",
+    "Til": "18:00",
+    "Kommentar": "",
+    "lat": 59.918694732583155,
+    "lon": 10.706067699909578
+  },
+  {
+    "Navn": "Bølgen & Moi Tjuvholmen",
+    "Sol hele dagen": "Nei",
+    "Fra": "14:30",
+    "Til": "21:00",
+    "Kommentar": "",
+    "lat": 59.90960800598122,
+    "lon": 10.722937830588124
+  },
+  {
+    "Navn": "The Thief",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "Kveldssol",
+    "lat": 59.908090576845794,
+    "lon": 10.721252937984712
+  },
+  {
+    "Navn": "Lofthus Samvirkelag Damplass",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "19:00",
+    "Kommentar": "Fra morgen",
+    "lat": 59.944253126349935,
+    "lon": 10.732529115270047
+  },
+  {
+    "Navn": "Anne på Landet Frogner",
+    "Sol hele dagen": "Nei",
+    "Fra": "11:00",
+    "Til": "20:00",
+    "Kommentar": "Flytte på seg for å ha sol hele tiden.",
+    "lat": 59.92531042345194,
+    "lon": 10.703735869229261
+  },
+  {
+    "Navn": "Anne På landet Hvervenbukta",
+    "Sol hele dagen": "Nei",
+    "Fra": "12:00",
+    "Til": "22:00",
+    "Kommentar": "Forsvinnner bak nesodden",
+    "lat": 59.83322389883581,
+    "lon": 10.772909669165172
+  },
+  {
+    "Navn": "Anne på Landet Hønse-Louises",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "18:00",
+    "Kommentar": "Før 12 på den ene siden av huset, etter 12 på den andre",
+    "lat": 59.93127695886994,
+    "lon": 10.757698076630767
+  },
+  {
+    "Navn": "Bread n Butter",
+    "Sol hele dagen": "Nei",
+    "Fra": "11:00",
+    "Til": "15:00",
+    "Kommentar": "Skriver de har sol nesten hele dag, men dette er best",
+    "lat": 59.93388372190759,
+    "lon": 10.760970069235308
+  },
+  {
+    "Navn": "Lorry",
+    "Sol hele dagen": "Nei",
+    "Fra": "14:00",
+    "Til": "",
+    "Kommentar": "",
+    "lat": 59.92115577190006,
+    "lon": 10.728577869226429
+  },
+  {
+    "Navn": "Ghost Pizza",
+    "Sol hele dagen": "Nei",
+    "Fra": "16:30",
+    "Til": "18:30",
+    "Kommentar": "Kun 10stk sitteplasser",
+    "lat": 59.9282400253648,
+    "lon": 10.71406015334098
+  },
+  {
+    "Navn": "Rouleur Bar & Café",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "17:00",
+    "Kommentar": "Sol frem til 17",
+    "lat": 59.92449150253462,
+    "lon": 10.740522791968425
+  },
+  {
+    "Navn": "ROSL /// Culture & Cycling",
+    "Sol hele dagen": "",
+    "Fra": "",
+    "Til": "17:00",
+    "Kommentar": "Sol frem til 17",
+    "lat": 59.92449150253462,
+    "lon": 10.740522791968425
+  },
+  {
+    "Navn": "Frauna",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "18:00",
+    "Kommentar": "Sol frem til 18",
+    "lat": 60.024832439172215,
+    "lon": 11.102058330668607
+  },
+  {
+    "Navn": "Brasserie Blanche",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "19:00",
+    "Kommentar": "Sol frem til 19",
+    "lat": 59.923706556967986,
+    "lon": 10.725612330597993
+  },
+  {
+    "Navn": "Røør",
+    "Sol hele dagen": "",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "Our outside seating is pretty minimal I’m afraid. It’s for smokers and groups of 2 really, though it does catch the sun beautifully in the early afternoon!",
+    "lat": 59.91554045007046,
+    "lon": 10.740157569222422
+  },
+  {
+    "Navn": "Cafe Lotus",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "",
+    "lat": 59.91337583446975,
+    "lon": 10.747451130590912
+  },
+  {
+    "Navn": "Lanternen Bygdøy",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "Til ca 21, men hele dagen",
+    "lat": 59.90762686530511,
+    "lon": 10.695494661271955
+  },
+  {
+    "Navn": "El Aroma",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "Hele dagen stort sett, mest kl 13, og utover til kl 18 ca",
+    "lat": 59.924774736405716,
+    "lon": 10.723829876626343
+  },
+  {
+    "Navn": "Lett Sjølyst",
+    "Sol hele dagen": "Nei",
+    "Fra": "10:00",
+    "Til": "19:00",
+    "Kommentar": "",
+    "lat": 59.9209022748561,
+    "lon": 10.683171769226236
+  },
+  {
+    "Navn": "Lett Hegdehaugsveien",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "",
+    "lat": 59.92231786664848,
+    "lon": 10.726845453336894
+  },
+  {
+    "Navn": "Mocca Kaffebar",
+    "Sol hele dagen": "",
+    "Fra": "",
+    "Til": "12:00",
+    "Kommentar": "Morgen frem til 10-12",
+    "lat": 59.91981938748368,
+    "lon": 10.7188395533353
+  },
+  {
+    "Navn": "Smalhans",
+    "Sol hele dagen": "Nei",
+    "Fra": "12:00",
+    "Til": "18:00",
+    "Kommentar": "",
+    "lat": 59.92407743068542,
+    "lon": 10.739835922653286
+  },
+  {
+    "Navn": "RollSushi",
+    "Sol hele dagen": "Nei",
+    "Fra": "12:00",
+    "Til": "20:00",
+    "Kommentar": "",
+    "lat": 59.93112935818078,
+    "lon": 10.712226522658096
+  },
+  {
+    "Navn": "The Scotsman",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "Tidlig formiddag",
+    "lat": 59.9129623387553,
+    "lon": 10.743397299905727
+  },
+  {
+    "Navn": "Ostara",
+    "Sol hele dagen": "Nei",
+    "Fra": "14:30",
+    "Til": "17:00",
+    "Kommentar": "12 sitteplasser",
+    "lat": 59.911168919415104,
+    "lon": 10.744445391959276
+  },
+  {
+    "Navn": "Eckers Cafe",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "",
+    "lat": 59.920456308616714,
+    "lon": 10.707751391965928
+  },
+  {
+    "Navn": "Lett Drammen",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "",
+    "lat": 59.743794238251674,
+    "lon": 10.206005391842874
+  },
+  {
+    "Navn": "Baker Hansen Rådhuset",
+    "Sol hele dagen": "Nei",
+    "Fra": "11:00",
+    "Til": "",
+    "Kommentar": "11 og utover",
+    "lat": 59.91098929044495,
+    "lon": 10.73865662264419
+  },
+  {
+    "Navn": "Torggata botaniske",
+    "Sol hele dagen": "Nei",
+    "Fra": "14:00",
+    "Til": "16:00",
+    "Kommentar": "og fra 17-18:30",
+    "lat": 59.91676746675391,
+    "lon": 10.751870184565695
+  },
+  {
+    "Navn": "Tostrup Uteservering",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "",
+    "lat": 59.91377313035239,
+    "lon": 10.740777745933807
+  },
+  {
+    "Navn": "MadAtBar",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "20:00",
+    "Kommentar": "Frem til 20.00",
+    "lat": 59.92337547655556,
+    "lon": 10.75216938457037
+  },
+  {
+    "Navn": "Frenchie",
+    "Sol hele dagen": "Nei",
+    "Fra": "13:00",
+    "Til": "20:00",
+    "Kommentar": "",
+    "lat": 59.915064560434615,
+    "lon": 10.718548823194581
+  },
+  {
+    "Navn": "Digg Grunerløkka",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "19:00",
+    "Kommentar": "Skrev bare når den går ned",
+    "lat": 59.92419516487162,
+    "lon": 10.759184284571022
+  },
+  {
+    "Navn": "Java Kaffebar",
+    "Sol hele dagen": "Nei",
+    "Fra": "09:00",
+    "Til": "12:30",
+    "Kommentar": "Til 12/13",
+    "lat": 67.27791417294122,
+    "lon": 14.424006435347032
+  },
+  {
+    "Navn": "Abelone Kjøkken og Bar",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "19:30",
+    "Kommentar": "Midt august 19.00. Ligger i brugata, så mye sol.",
+    "lat": 59.91418272610695,
+    "lon": 10.75651876127656
+  },
+  {
+    "Navn": "Williamsburg Bab & Beer",
+    "Sol hele dagen": "Nei",
+    "Fra": "12:00",
+    "Til": "20:00",
+    "Kommentar": "",
+    "lat": 59.91445620991972,
+    "lon": 10.738446099359152
+  },
+  {
+    "Navn": "Lawo Terrasse",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "",
+    "lat": 59.914736880892754,
+    "lon": 10.735726007304406
+  },
+  {
+    "Navn": "Oslo Streetfood",
+    "Sol hele dagen": "Nei",
+    "Fra": "12:00",
+    "Til": "14:30",
+    "Kommentar": "Til 14/15",
+    "lat": 59.91623152932014,
+    "lon": 10.750538769223049
+  },
+  {
+    "Navn": "The Highbury Pub",
+    "Sol hele dagen": "Nei",
+    "Fra": "15:00",
+    "Til": "19:00",
+    "Kommentar": "",
+    "lat": 59.927927602272305,
+    "lon": 10.719155291970845
+  },
+  {
+    "Navn": "Fyret Mat & drikke",
+    "Sol hele dagen": "Nei",
+    "Fra": "11:00",
+    "Til": "15:30",
+    "Kommentar": "",
+    "lat": 59.91567408553762,
+    "lon": 10.74851993059263
+  },
+  {
+    "Navn": "Cacadou",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "20:00",
+    "Kommentar": "",
+    "lat": 59.917203483227524,
+    "lon": 10.753185130593609
+  },
+  {
+    "Navn": "Syng Grunerløkka",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "Store deler av dagen",
+    "lat": 59.92026494027752,
+    "lon": 10.755130461280709
+  },
+  {
+    "Navn": "Cafe Sara",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "17:00",
+    "Kommentar": "Til kl 17 ca",
+    "lat": 59.9180582412426,
+    "lon": 10.754320637991558
+  },
+  {
+    "Navn": "Kullt",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "19:00",
+    "Kommentar": "Hele ettermiddagen til 18/19",
+    "lat": 59.911635243889656,
+    "lon": 10.736392268672063
+  },
+  {
+    "Navn": "Prindsen Hage",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "",
+    "lat": 59.91503990843704,
+    "lon": 10.75542721524963
+  },
+  {
+    "Navn": "Glør",
+    "Sol hele dagen": "Nei",
+    "Fra": "15:00",
+    "Til": "19:00",
+    "Kommentar": "",
+    "lat": 59.91488549756569,
+    "lon": 10.750078184016699
+  },
+  {
+    "Navn": "Godthåb",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "18:00",
+    "Kommentar": "Sol til 18",
+    "lat": 59.913391562434676,
+    "lon": 10.761253699906014
+  },
+  {
+    "Navn": "TGI Aker brygge",
+    "Sol hele dagen": "Nei",
+    "Fra": "11:00",
+    "Til": "16:00",
+    "Kommentar": "",
+    "lat": 59.91009523612431,
+    "lon": 10.726544099903851
+  },
+  {
+    "Navn": "Cafe 33",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "",
+    "lat": 59.9260815379831,
+    "lon": 10.758942561284728
+  },
+  {
+    "Navn": "Brygg Oslo",
+    "Sol hele dagen": "Nei",
+    "Fra": "14:00",
+    "Til": "18:00",
+    "Kommentar": "",
+    "lat": 59.91369098673889,
+    "lon": 10.74845716922124
+  },
+  {
+    "Navn": "Dapper Bistro",
+    "Sol hele dagen": "Nei",
+    "Fra": "12:00",
+    "Til": "18:00",
+    "Kommentar": "",
+    "lat": 59.90699715522064,
+    "lon": 10.759481607846578
+  },
+  {
+    "Navn": "Grådi",
+    "Sol hele dagen": "Nei",
+    "Fra": "12:00",
+    "Til": "18:00",
+    "Kommentar": "",
+    "lat": 59.914761646459404,
+    "lon": 10.771233653879454
+  },
+  {
+    "Navn": "Tatakii Asian",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "Store deler av dagen. Middelthunsgate",
+    "lat": 59.928834598739606,
+    "lon": 10.708927907314036
+  },
+  {
+    "Navn": "Oslo Mekaniske Verksted",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "Par timer på ettermiddagen",
+    "lat": 59.911926485051076,
+    "lon": 10.761987291959715
+  },
+  {
+    "Navn": "Kjøkken og Bar",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "19:00",
+    "Kommentar": "Feem til 19.",
+    "lat": 59.915174741642545,
+    "lon": 10.748181445386894
+  },
+  {
+    "Navn": "Internasjonalen",
+    "Sol hele dagen": "Nei",
+    "Fra": "13:00",
+    "Til": "19:30",
+    "Kommentar": "",
+    "lat": 59.91506742109572,
+    "lon": 10.749508130592016
+  },
+  {
+    "Navn": "Fuglen Oslo",
+    "Sol hele dagen": "Nei",
+    "Fra": "09:30",
+    "Til": "13:00",
+    "Kommentar": "",
+    "lat": 59.9173644587688,
+    "lon": 10.740049191963813
+  },
+  {
+    "Navn": "Brød & Sirkus",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "14:00",
+    "Kommentar": "Forsvinner 13-14",
+    "lat": 59.913593987995675,
+    "lon": 10.735831623193665
+  },
+  {
+    "Navn": "Kampen Kaffe & Bar Thorbjørn Egner Plass",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "18:00",
+    "Kommentar": "",
+    "lat": 59.91238870361174,
+    "lon": 10.780801815247733
+  },
+  {
+    "Navn": "Kampen Kaffe & Bar Nannestadgata",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "19:00",
+    "Kommentar": "Litt lengre enn over",
+    "lat": 59.91243173253783,
+    "lon": 10.780887645932697
+  },
+  {
+    "Navn": "Radegast",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "20:00",
+    "Kommentar": "Tipper 20:00",
+    "lat": 59.922624279120264,
+    "lon": 10.754159076624834
+  },
+  {
+    "Navn": "Ling Ling",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "20:00",
+    "Kommentar": "Til 20:00",
+    "lat": 59.908805081839205,
+    "lon": 10.72603327661516
+  },
+  {
+    "Navn": "Restaurant Ludo",
+    "Sol hele dagen": "Nei",
+    "Fra": "17:00",
+    "Til": "20:00",
+    "Kommentar": "",
+    "lat": 59.92691137838126,
+    "lon": 10.724185045395048
+  },
+  {
+    "Navn": "Cafe Fiasco AS",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "Noen timer utover ettermiddagen",
+    "lat": 59.912686987372695,
+    "lon": 10.75514823059034
+  },
+  {
+    "Navn": "Velochef Club House",
+    "Sol hele dagen": "Nei",
+    "Fra": "14:00",
+    "Til": "18:00",
+    "Kommentar": "Muligens under tak",
+    "lat": 59.91707168993105,
+    "lon": 10.75657851525095
+  },
+  {
+    "Navn": "xef tjuvholmen",
+    "Sol hele dagen": "Nei",
+    "Fra": "17:00",
+    "Til": "",
+    "Kommentar": "Til solen går ne",
+    "lat": 59.90896463100578,
+    "lon": 10.721595930587807
+  },
+  {
+    "Navn": "Vesper Bar",
+    "Sol hele dagen": "Nei",
+    "Fra": "15:00",
+    "Til": "21:00",
+    "Kommentar": "til 1930/21:00",
+    "lat": 59.90791187927645,
+    "lon": 10.760558537984474
+  },
+  {
+    "Navn": "Tolvte og Kranen",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "Takterasse i 12 etasje",
+    "lat": 59.90675984273543,
+    "lon": 10.75588113798348
+  },
+  {
+    "Navn": "Brasserie Rivoli",
+    "Sol hele dagen": "Nei",
+    "Fra": "14:00",
+    "Til": "",
+    "Kommentar": "Ut kvelden",
+    "lat": 59.90698920065765,
+    "lon": 10.755766407298932
+  },
+  {
+    "Navn": "Sentralen Mat",
+    "Sol hele dagen": "Nei",
+    "Fra": "10:00",
+    "Til": "19:00",
+    "Kommentar": "",
+    "lat": 59.911542622999875,
+    "lon": 10.740142915247189
+  },
+  {
+    "Navn": "Baker Hansen Frogner",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "12:00",
+    "Kommentar": "Fra morgenen",
+    "lat": 59.91709418958111,
+    "lon": 10.71604848456607
+  },
+  {
+    "Navn": "Frognerseteren Restaurant",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "",
+    "lat": 59.978061624650124,
+    "lon": 10.677208169266018
+  },
+  {
+    "Navn": "Pust Kaffebar",
+    "Sol hele dagen": "Nei",
+    "Fra": "14:00",
+    "Til": "",
+    "Kommentar": "Fra lunch og ut",
+    "lat": 69.65250697440369,
+    "lon": 18.960556937671356
+  },
+  {
+    "Navn": "Katla Oslo",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "20:00",
+    "Kommentar": "Ikke starttidspunkt",
+    "lat": 59.916986567619404,
+    "lon": 10.738276753881072
+  },
+  {
+    "Navn": "Arts Restaurant",
+    "Sol hele dagen": "Nei",
+    "Fra": "13:00",
+    "Til": "20:00",
+    "Kommentar": "2 sider",
+    "lat": 59.91030664366404,
+    "lon": 10.722667430588706
+  },
+  {
+    "Navn": "Restaurant Salome",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "19:00",
+    "Kommentar": "Fra morgen",
+    "lat": 59.90853981900467,
+    "lon": 10.753911684560101
+  },
+  {
+    "Navn": "Nedre Foss Gård",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "Servering 1 til kl 15, servering 2 til 21:00",
+    "lat": 59.92264918690792,
+    "lon": 10.75372867662482
+  },
+  {
+    "Navn": "Kolonialen Bislett",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "13:00",
+    "Kommentar": "Ikke noe etter 13. Donno fra når",
+    "lat": 59.923011714461424,
+    "lon": 10.735601654698057
+  },
+  {
+    "Navn": "Food Family",
+    "Sol hele dagen": "Nei",
+    "Fra": "14:00",
+    "Til": "18:00",
+    "Kommentar": "Fra lunch til 18.",
+    "lat": 59.91419818542781,
+    "lon": 10.774193561276602
+  },
+  {
+    "Navn": "Tjuvholmen Sjømagasin",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "20:00",
+    "Kommentar": "",
+    "lat": 59.90824283988914,
+    "lon": 10.721821399902344
+  },
+  {
+    "Navn": "Duckpin",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "17:00",
+    "Kommentar": "",
+    "lat": 59.91750225247099,
+    "lon": 10.752844422648492
+  },
+  {
+    "Navn": "The Salmon",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "19:00",
+    "Kommentar": "Donno start",
+    "lat": 59.908409889856976,
+    "lon": 10.723458353327228
+  },
+  {
+    "Navn": "Mirabel Oslo",
+    "Sol hele dagen": "Nei",
+    "Fra": "15:00",
+    "Til": "",
+    "Kommentar": "Fra 15. thats it",
+    "lat": 59.90299462970934,
+    "lon": 10.752069107296073
+  },
+  {
+    "Navn": "Restauranthuset Operaen",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "",
+    "lat": 59.90789425608089,
+    "lon": 10.752466030587177
+  },
+  {
+    "Navn": "Cultivate Food",
+    "Sol hele dagen": "Nei",
+    "Fra": "12:30",
+    "Til": "",
+    "Kommentar": "Til solen går ned",
+    "lat": 59.92507173927842,
+    "lon": 10.759125453886613
+  },
+  {
+    "Navn": "Royal Gastropub",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "20:30",
+    "Kommentar": "I August er solen til 19:30 på somemr selvfølgelig lengre.",
+    "lat": 59.91077367719153,
+    "lon": 10.752416999356386
+  },
+  {
+    "Navn": "Peloton",
+    "Sol hele dagen": "Nei",
+    "Fra": "11:30",
+    "Til": "19:30",
+    "Kommentar": "",
+    "lat": 59.917871510196996,
+    "lon": 10.754060169224104
+  },
+  {
+    "Navn": "Vulkanfisk",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "Antar",
+    "lat": 59.92240406558729,
+    "lon": 10.751781830597217
+  },
+  {
+    "Navn": "Lucky Bird",
+    "Sol hele dagen": "Ja",
+    "Fra": "",
+    "Til": "",
+    "Kommentar": "Antar",
+    "lat": 59.92316507955449,
+    "lon": 10.751865415255256
+  },
+  {
+    "Navn": "Theatercafeen",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "11:00",
+    "Kommentar": "Forsvinner formiddag kl 11",
+    "lat": 59.914556029047276,
+    "lon": 10.73393389196158
+  },
+  {
+    "Navn": "Erlik Kaffe",
+    "Sol hele dagen": "Nei",
+    "Fra": "12:30",
+    "Til": "",
+    "Kommentar": "Hele dagen fra litt før lunch",
+    "lat": 59.914738312931256,
+    "lon": 10.743124291961728
+  },
+  {
+    "Navn": "Fiskeriet Youngstorget",
+    "Sol hele dagen": "Nei",
+    "Fra": "15:00",
+    "Til": "20:00",
+    "Kommentar": "",
+    "lat": 59.914923757661015,
+    "lon": 10.749569930592118
+  },
+  {
+    "Navn": "Lofthus Samvirkelag avd- Kunstnernes Hus",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "19:00",
+    "Kommentar": "",
+    "lat": 59.91979317786726,
+    "lon": 10.730404399910508
+  },
+  {
+    "Navn": "Way Down South",
+    "Sol hele dagen": "Nei",
+    "Fra": "13:00",
+    "Til": "19:00",
+    "Kommentar": "",
+    "lat": 59.91929196293545,
+    "lon": 10.754609607855194
+  },
+  {
+    "Navn": "Pica Pica Kafe og Bar",
+    "Sol hele dagen": "Nei",
+    "Fra": "",
+    "Til": "17:00",
+    "Kommentar": "",
+    "lat": 59.932284663115276,
+    "lon": 10.725008830603988
+  },
+  {
+    "Navn": "Oslo Raw Bakery",
+    "Sol hele dagen": "Nei",
+    "Fra": "12:00",
+    "Til": "17:00",
+    "Kommentar": "",
+    "lat": 59.93278523932471,
+    "lon": 10.733995469234422
+  },
+  {
+    "Navn": "Sunt og Nam Oslo",
+    "Sol hele dagen": "Nei",
+    "Fra": "11:00",
+    "Til": "19:00",
+    "Kommentar": "",
+    "lat": 59.91308880898013,
+    "lon": 10.73626223059081
+  },
+  {
+    "Navn": "Aku Aku Tikibar",
+    "Sol hele dagen": "Nei",
+    "Fra": "15:00",
+    "Til": "17:00",
+    "Kommentar": "",
+    "lat": 59.925466491243185,
+    "lon": 10.759878260736345
+  },
+  {
+    "Navn": "Ekebergrestauranten",
+    "Sol hele dagen": "Nei",
+    "Fra": "12:00",
+    "Til": "20:00",
+    "Kommentar": "",
+    "lat": 59.899916465193186,
+    "lon": 10.761561169211653
+  },
+  {
+    "Navn": "Foodie",
+    "Sol hele dagen": "Nei",
+    "Fra": "15:00",
+    "Til": "16:00",
+    "Kommentar": "",
+    "lat": 59.913162322125224,
+    "lon": 10.73628180730318
+  },
+  {
+    "Navn": "Cafekontoret",
+    "Sol hele dagen": "Nei",
+    "Fra": "12:00",
+    "Til": "19:00",
+    "Kommentar": "",
+    "lat": 59.909122812207386,
+    "lon": 10.768339030587978
+  }
+]
