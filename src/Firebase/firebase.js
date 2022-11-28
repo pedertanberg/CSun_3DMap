@@ -69,7 +69,7 @@ const logInWithEmailAndPassword = async (email, password) => {
 };
 
 const registerWithEmailAndPassword = async (name, email, password) => {
-  console.log(name,email,password)
+  // console.log(name,email,password)
   try {
     const res = await createUserWithEmailAndPassword(auth, email, password);
     const user = res.user;
@@ -101,58 +101,83 @@ const logout = () => {
 };
 
 /**_____________FUNCTIONS____________________________________________ */
-const save_Place = async (key, userID) => {
+const save_Place = async (key, userID, type, value) => {
+  if(!value){
   try {
-
-    const q = query(collection(db, "users"), where("uid", "==", userID));
-    const docs = await getDocs(q);
-    console.log(docs)
-    const docRef = doc(db, "users", docs.docs[0].id);
-    const docSnap = await getDoc(docRef);
-    if (docSnap.exists()) {
+      const q = query(collection(db, type=="verified" ? "RestBar_Verified" :"Bars_Unverified" ), where("__name__", "==", key));
+      const docs = await getDocs(q);
+      // console.log(docs.docs)
+      const docRef = doc(db, type=="verified" ? "RestBar_Verified" :"Bars_Unverified", docs.docs[0].id);
+      const docSnap = await getDoc(docRef);
       const data = docSnap.data();
-      if (data.saved_places.includes(key)) {
+      if (data.user_likes.includes(key)) {
         // alert("Already saved");
         message.warning('Already saved');
       } else {
-        data.saved_places.push(key);
+        data.user_likes.push(userID);
         await updateDoc(docRef, data);
         message.success("Place Saved");
-        // alert("Saved");
       }
-    } else {
-      message.error("No such document!");
-    }
   } catch (err) {
     console.error(err);
     alert(err.message);
+
+
+    }
+  }else{
+    unsave_place(key, userID, type)
+
   }
+    
 };
 
-const unsave_place = async (key, userID) => {
+const unsave_place = async (key, userID,type) => { //remember to add type when fetching data
   try {
-
-    const q = query(collection(db, "users"), where("uid", "==", userID));
+    // console.log("Starting", key, userID, type)
+    const q = query(collection(db, type=="verified" ? "RestBar_Verified" :"Bars_Unverified" ), where("__name__", "==", key));
     const docs = await getDocs(q);
-    const docRef = doc(db, "users", docs.docs[0].id);
+    // console.log(docs.docs)
+    const docRef = doc(db, type=="verified" ? "RestBar_Verified" :"Bars_Unverified", docs.docs[0].id);
     const docSnap = await getDoc(docRef);
-    if (docSnap.exists()) {
-      const data = docSnap.data();
-      if (data.saved_places.includes(key)) {
-        const filteredArr = data.saved_places.filter(e => e !== key);
-        data.saved_places = filteredArr
+    const data = docSnap.data();
+    if (data.user_likes.includes(userID)) {
+
+      const filteredArr = data.user_likes.filter(e => e !== userID);
+        data.user_likes = filteredArr
         await updateDoc(docRef, data);
         message.success("Place Removed");
-      } else {
-        message.warning('Not saved yet');
-      }
     } else {
-      message.error("No such document!");
+      message.warning('Not saved yet');
     }
-  } catch (err) {
-    console.error(err);
-    alert(err.message);
+} catch (err) {
+  console.error(err);
+  alert(err.message);
+
+
   }
+  // try {
+
+  //   const q = query(collection(db, "users"), where("uid", "==", userID));
+  //   const docs = await getDocs(q);
+  //   const docRef = doc(db, "users", docs.docs[0].id);
+  //   const docSnap = await getDoc(docRef);
+  //   if (docSnap.exists()) {
+  //     const data = docSnap.data();
+  //     if (data.saved_places.includes(key)) {
+  //       const filteredArr = data.saved_places.filter(e => e !== key);
+  //       data.saved_places = filteredArr
+  //       await updateDoc(docRef, data);
+  //       message.success("Place Removed");
+  //     } else {
+  //       message.warning('Not saved yet');
+  //     }
+  //   } else {
+  //     message.error("No such document!");
+  //   }
+  // } catch (err) {
+  //   console.error(err);
+  //   alert(err.message);
+  // }
 };
 
  const getMarker = async() => {
@@ -162,30 +187,95 @@ const unsave_place = async (key, userID) => {
   const data2=[]
   querySnapshot.forEach((doc) => {
     const temp_data = doc.data()
-    temp_data.key = doc.id
-    data2.push(temp_data)
+      if(temp_data.user_likes && temp_data.user_likes.length>0 && !temp_data.user_likes.includes(auth.currentUser.uid)){
+        temp_data.likes =temp_data.user_likes.length
+      }else if(temp_data.user_likes && temp_data.user_likes.length>0 && temp_data.user_likes.includes(auth.currentUser.uid)){
+        temp_data.saved = true
+        temp_data.likes =temp_data.user_likes.length
+      }
+      else{
+        temp_data.saved = false
+        temp_data.likes = 0
+      }
+      temp_data.key = doc.id
+      data2.push(temp_data)
   });
 
   return data2
   
   }
 
-  const getSavedPlaces = async(userID) => {
-    const q1 = query(collection(db, "users"), where("uid", "==", userID));
-    const docs = await getDocs(q1);
-    const docRef = doc(db, "users", docs.docs[0].id);
-    const docSnap = await getDoc(docRef);
-    const user_data = docSnap.data()
-    const places = user_data.saved_places
-
-    const q2 = query(collection(db, "RestBar_Verified"),where("__name__", "in", places));
-    const querySnapshot =  await getDocs(q2);
+  const getUnVerified = async() => {
+    const q = query(collection(db, "Bars_Unverified"));
+    const querySnapshot =  await getDocs(q);
     const data2=[]
     querySnapshot.forEach((doc) => {
       const temp_data = doc.data()
-      temp_data.id = doc.id
+      if(temp_data.user_likes && temp_data.user_likes.length>0 && !temp_data.user_likes.includes(auth.currentUser.uid)){
+        temp_data.likes =temp_data.user_likes.length
+      }else if(temp_data.user_likes && temp_data.user_likes.length>0 && temp_data.user_likes.includes(auth.currentUser.uid)){
+        temp_data.saved = true
+        temp_data.likes =temp_data.user_likes.length
+      }
+      else{
+        temp_data.saved = false
+        temp_data.likes = 0
+      }
+      temp_data.key = doc.id
       data2.push(temp_data)
     });
+  
+    return data2
+    
+    }
+
+  const getSavedPlaces = async(userID) => {
+    //get all restaurants and bars where userid is in user_likes¨
+    const data2=[]
+    const q = query(collection(db, "RestBar_Verified"), where("user_likes", "array-contains", userID));
+    const querySnapshot =  await getDocs(q);
+
+    querySnapshot.forEach((doc) => {
+      const temp_data = doc.data()
+      temp_data.key = doc.id
+      temp_data.type = "verified"
+      data2.push(temp_data)
+    });
+
+    const q2 = query(collection(db, "Bars_Unverified"), where("user_likes", "array-contains", userID));
+    const querySnapshot2 =  await getDocs(q2);
+
+    querySnapshot2.forEach((doc) => {
+      const temp_data = doc.data()
+      temp_data.key = doc.id
+      temp_data.type = "unverified"
+      data2.push(temp_data)
+    });
+
+    //OLD SETUP
+    // const q1 = query(collection(db, "users"), where("uid", "==", userID));
+    // const docs = await getDocs(q1);
+    // const docRef = doc(db, "users", docs.docs[0].id);
+    // const docSnap = await getDoc(docRef);
+    // const user_data = docSnap.data()
+    // const places = user_data.saved_places
+    // const data2=[]
+
+    // const q2 = query(collection(db, "RestBar_Verified"),where("__name__", "in", places));
+    // const querySnapshot =  await getDocs(q2);
+    // querySnapshot.forEach((doc) => {
+    //   const temp_data = doc.data()
+    //   temp_data.id = doc.id
+    //   data2.push(temp_data)
+    // });
+
+    // const q3 = query(collection(db, "Bars_Unverified"),where("__name__", "in", places));
+    // const querySnapshot2 =  await getDocs(q3);
+    // querySnapshot2.forEach((doc) => {
+    //   const temp_data = doc.data()
+    //   temp_data.id = doc.id
+    //   data2.push(temp_data)
+    // });
   
     return data2
   }
@@ -205,5 +295,6 @@ export {
   save_Place,
   getMarker,
   getSavedPlaces,
-  unsave_place
+  unsave_place,
+  getUnVerified
 };

@@ -40,6 +40,7 @@ for (let i = 0; i < data.length; i++) {
         comment: data[i].Kommentar,
         dislikes: 0,
         likes: 0,
+        user_likes : [],
     }
      addDoc(collection(db, "RestBar_Verified"), docData);
 

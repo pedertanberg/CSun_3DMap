@@ -10,7 +10,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 import React, { Component, useState, useEffect } from "react";
-import { Layout, Menu, Button, Typography, Card, Form, Input, Checkbox } from "antd";
+import { Layout, Button, Typography, Card, Form, Input, Checkbox } from "antd";
 import { Link, useHistory } from "react-router-dom";
 import { auth, registerWithEmailAndPassword, signInWithGoogle } from "../../Firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";

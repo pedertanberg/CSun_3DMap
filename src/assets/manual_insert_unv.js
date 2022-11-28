@@ -38,6 +38,7 @@ for (let i = 0; i < data.length; i++) {
         address: data[i].Address,
         likes: 0,
         dislikes: 0,
+        user_likes : [],
     }
      addDoc(collection(db, "Bars_Unverified"), docData);
 

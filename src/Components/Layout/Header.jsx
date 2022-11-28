@@ -214,7 +214,7 @@ function Header({ placement, name, subName, onPress, handleSidenavColor, handleS
             width={360}
             onClose={hideDrawer}
             placement={placement}
-            visible={visible}
+            open={visible}
           >
             <div layout="vertical">
               <div className="header-top">

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Layout, Menu, Card, Col, Row, Divider, Collapse, Button } from "antd";
+import { Layout, Card, Col, Row, Divider, Collapse, Button } from "antd";
 import "./Profile.css";
-const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
 const { Panel } = Collapse;
 import { auth, getSavedPlaces, unsave_place } from "../../Firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { HeartTwoTone } from "@ant-design/icons";
 
 let i;
 const saved_places = [];
@@ -34,14 +34,21 @@ const Profile = () => {
           <Col span={6} key={i}>
             <Card title={title} bordered={false}>
               <p>{res[i].address ? res[i].address : "No address"}</p>
-              <Button
+              <HeartTwoTone
                 onClick={() => {
-                  unsave_place(res[i].id, user.uid);
+                  unsave_place(res[i].key, user.uid, res[i].type);
+                  removeItem(i);
+                }}
+                twoToneColor={"#eb2f96"}
+              />
+              {/* <Button
+                onClick={() => {
+                  unsave_place(res[i].key, user.uid, res[i].type);
                   removeItem(i);
                 }}
               >
                 Unsave
-              </Button>
+              </Button> */}
             </Card>
           </Col>
         );
@@ -56,10 +63,9 @@ const Profile = () => {
   }, []);
 
   const removeItem = (id) => {
-    console.log(id);
-    const newPlaces = saved_places.filter((item, index) => index != id);
-
-    setSavedPlaces(newPlaces);
+    setTimeout(() => {
+      getSavedPlacesFunction();
+    }, 2500);
   };
 
   return (

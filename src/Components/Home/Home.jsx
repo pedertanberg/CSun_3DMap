@@ -8,9 +8,9 @@ const App = () => (
   <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%" }}>
     {/* <div class="blob white"></div> */}
     <Link to="/Map">
-      <a href="http://example.com" class="pulsingButton">
+      <div href="http://example.com" className="pulsingButton">
         Finn din solstol
-      </a>
+      </div>
     </Link>
   </div>
 );
