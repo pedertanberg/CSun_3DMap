@@ -1,0 +1,6 @@
+.Profile_Header{
+    background: rgb(248,248,248) !important;
+    background: -moz-linear-gradient(90deg, rgba(248,248,248,1) 0%, rgba(240,233,233,1) 51%, rgba(225,231,240,1) 100%) !important;
+    background: -webkit-linear-gradient(90deg, rgba(248,248,248,1) 0%, rgba(240,233,233,1) 51%, rgba(225,231,240,1) 100%) !important;
+    background: linear-gradient(90deg, rgba(248,248,248,1) 0%, rgba(240,233,233,1) 51%, rgba(225,231,240,1) 100%) !important;
+}

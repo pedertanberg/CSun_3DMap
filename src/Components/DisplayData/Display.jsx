@@ -5,8 +5,11 @@ import { Button, Input, Space, Table, Form, InputNumber, Popconfirm, Typography 
 import Highlighter from "react-highlight-words";
 // import "antd/dist/antd.css";
 import lonlatData from "../../assets/lonlat.json";
+import { auth, save_Place, getMarker } from "../../Firebase/firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 const Display = () => {
+  const [user, loading, error] = useAuthState(auth);
   const [data, setData] = useState(lonlatData);
   const [searchText, setSearchText] = useState("");
   const [searchedColumn, setSearchedColumn] = useState("");
@@ -123,6 +126,7 @@ const Display = () => {
   // }, []);
 
   const handelike = (key) => {
+    save_Place(key, user.uid);
     const newData = [...data];
     newData[key].likes = data[key].likes + 1;
     console.log("new likes", newData[key].likes);
@@ -144,13 +148,13 @@ const Display = () => {
   const columns = [
     {
       title: "Title",
-      dataIndex: "Title",
-      key: "Title",
-      ...getColumnSearchProps("Title")
+      dataIndex: "title",
+      key: "title",
+      ...getColumnSearchProps("title")
     },
     {
       title: "Address",
-      dataIndex: "Address",
+      dataIndex: "address",
       key: "Address"
     },
     {
@@ -170,13 +174,20 @@ const Display = () => {
       key: "action",
       render: (_, record) => (
         <Space size="middle">
-          <Button onClick={() => handelike(record.key)}>Like</Button>
-          <Button onClick={() => handeDislike(record.key)}>Dislike</Button>
-          <Button onClick={() => handleDelete(record.key)}>Delete</Button>
+          <Button onClick={() => handelike(record.key)}>Lagre</Button>
+          {/* <Button onClick={() => handeDislike(record.key)}>Dislike</Button> */}
+          {/* <Button onClick={() => handleDelete(record.key)}>Delete</Button> */}
         </Space>
       )
     }
   ];
+
+  useEffect(() => {
+    getMarker().then((res) => {
+      console.log(res);
+      setData(res);
+    });
+  }, []);
 
   return (
     <div className="display">

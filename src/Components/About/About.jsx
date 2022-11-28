@@ -24,10 +24,12 @@ const App = () => (
       <p>Vi har nå lansert vår BETA-versjon, og er fortsatt i utvikling.</p>
       <p>Vi ønsker derfor dine tilbakemeldinger, og du kan nå oss på support@tast.tech</p>
     </Card>
-    {/* <Card title="Card" size="small">
-      <p>Card content</p>
-      <p>Card content</p>
-    </Card> */}
+    <Card title="Verifiserte steder" size="small" headStyle={{ background: "#52c41a", color: "white" }}>
+      <p>
+        Verifiserte steder er restauranter, barer og cafeer CSun selv har verifisert at har både uteservering og
+        soltimer (på sommer)
+      </p>
+    </Card>
   </Space>
 );
 export default App;

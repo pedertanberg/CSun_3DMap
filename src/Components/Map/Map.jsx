@@ -88,8 +88,8 @@ function App() {
         localDate: today,
         sunLightingEnabled: true,
         directShadowsEnabled: true,
-        timeSliderPosition: today.getUTCMinutes(),
-        utcOffset: 1
+        timeSliderPosition: today.getUTCMinutes()
+        // utcOffset: 1
         // view: view
       });
 
@@ -153,54 +153,6 @@ function App() {
           view.extent = extent;
         });
       });
-
-      // const shadowWidget = new ShadowCast({ view: view });
-
-      // // add the widget to the view
-      // view.ui.add(shadowWidget, "bottom-left");
-
-      // const bookmarks = new Bookmarks({
-      //   view,
-      //   // allows bookmarks to be added, edited, or deleted
-      //   editingEnabled: true
-      // });
-
-      // const bkExpand = new Expand({
-      //   view,
-      //   content: bookmarks,
-      //   expanded: true
-      // });
-
-      // Create MeshSymbol3D for symbolizing SceneLayer
-      // const symbol = {
-      //   type: "mesh-3d", // autocasts as new MeshSymbol3D()
-      //   symbolLayers: [
-      //     {
-      //       type: "fill", // autocasts as new FillSymbol3DLayer()
-      //       // If the value of material is not assigned, the default color will be grey
-      //       material: {
-      //         color: [244, 247, 134]
-      //       }
-      //     }
-      //   ]
-      // };
-
-      // sceneLayer.renderer = {
-      //   type: "simple", // autocasts as new SimpleRenderer()
-      //   symbol: symbol
-      // };
-
-      // Add the widget to the top-right corner of the view
-      // view.ui.add(bkExpand, "top-right");
-
-      // bonus - how many bookmarks in the webmap?
-      // webscene.when(() => {
-      //   if (webmap.bookmarks && webmap.bookmarks.length) {
-      //     console.log("Bookmarks: ", webmap.bookmarks.length);
-      //   } else {
-      //     console.log("No bookmarks in this webmap.");
-      //   }
-      // });
     }
   }, []);
 
