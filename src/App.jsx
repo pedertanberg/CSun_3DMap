@@ -1,15 +1,10 @@
 import React, { useRef, useEffect } from "react";
-import { Map, Navbar, Table } from "./Components";
+import { Map, Navbar, Table, FloatButton } from "./Components";
 import "./App.css";
-
-// Import the functions you need from the SDKs you need
+import { QuestionCircleOutlined } from "@ant-design/icons";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyDtTw4bSJgZ1UEryWnowhv1WTmg0qD-o18",
   authDomain: "csun3d.firebaseapp.com",
@@ -28,11 +23,13 @@ const analytics = getAnalytics(app);
 const App = () => (
   <>
     <div className="App">
-      <div className="gradient__bg">
+      <div className="">
         <Navbar />
+        <Map />
       </div>
+      <FloatButton />
     </div>
-    <Map />
+    {/* <Map /> */}
   </>
 );
 

@@ -1,7 +1,7 @@
 .mapDiv {
-  padding: 10%;
-  margin: 10%;
-  height: 80%;
+  padding: 0;
+  margin: 0;
+  height: 80vh;
   width: 100%;
   z-index: 100000;
 }
@@ -13,7 +13,7 @@
 }
 
 body {
-  background: var(--color-bg);
+  /* background: var(--color-bg); */
 }
 
 a {
@@ -100,7 +100,7 @@ a {
 }
 
 .ant-select-selection {
-  background-color: green !important;
-  background: greenyellow !important;
+  /* background-color: green !important;
+  background: greenyellow !important; */
 }
 
