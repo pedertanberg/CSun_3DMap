@@ -15,6 +15,7 @@ import TileLayer from "@arcgis/core/layers/TileLayer";
 import Graphic from "@arcgis/core/Graphic";
 import { shopLocator } from "../../locator";
 import { coffee } from "../../assets/images";
+import DaylightViewModel from "@arcgis/core/widgets/Daylight/DaylightViewModel";
 
 /*
 trees: 33383da8a75f4d24b4b6a0d0532abe6e
@@ -27,6 +28,7 @@ esriConfig.apiKey =
 function App() {
   const mapDiv = useRef(null);
   const routeLayer = new RouteLayer();
+  const today = new Date();
 
   useEffect(() => {
     if (mapDiv.current) {
@@ -82,15 +84,27 @@ function App() {
         expanded: false
       });
 
+      const daylightModel = new DaylightViewModel({
+        localDate: today,
+        sunLightingEnabled: true,
+        directShadowsEnabled: true,
+        timeSliderPosition: today.getUTCMinutes(),
+        utcOffset: 1
+        // view: view
+      });
+
       const daylightExpand = new Expand({
         view: view,
         content: new Daylight({
           view: view
+          // viewModel: daylightModel
         }),
         group: "bottom-right",
         expanded: true
       });
       view.ui.add([weatherExpand, daylightExpand], "bottom-right");
+      view.environment.lighting.directShadowsEnabled = true;
+      view.environment.lighting.date = today;
 
       const routing = new Expand({
         view: view,

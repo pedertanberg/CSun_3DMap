@@ -2,3 +2,8 @@ export { default as Navbar } from './Navbar/Nabar';
 export { default as Map } from './Map/Map';
 export { default as Table } from './DisplayData/Display';
 export {default as FloatButton} from './FloatButton/FloatButt';
+export {default as SignIn} from './Signin/SignIn';
+export {default as SignUp} from './Signup/SignUp';
+export {default as Main} from './Layout/Main';
+export {default as Home} from './Home/Home';
+export {default as About} from './About/About';

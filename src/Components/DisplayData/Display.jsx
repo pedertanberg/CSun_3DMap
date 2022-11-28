@@ -1,14 +1,13 @@
 //functional component which loads data from ../../assets/lonlat.json and displays in antd table
 import React, { useState, useEffect, useRef } from "react";
 import { SearchOutlined } from "@ant-design/icons";
-import { Button, Input, Space, Table } from "antd";
+import { Button, Input, Space, Table, Form, InputNumber, Popconfirm, Typography } from "antd";
 import Highlighter from "react-highlight-words";
 // import "antd/dist/antd.css";
 import lonlatData from "../../assets/lonlat.json";
 
 const Display = () => {
-  const [data, setData] = useState([]);
-  console.log("lonlat", lonlatData);
+  const [data, setData] = useState(lonlatData);
   const [searchText, setSearchText] = useState("");
   const [searchedColumn, setSearchedColumn] = useState("");
   const searchInput = useRef(null);
@@ -115,13 +114,32 @@ const Display = () => {
       )
   });
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = lonlatData;
-      setData(result);
-    };
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const result = lonlatData;
+  //     setData(result);
+  //   };
+  //   fetchData();
+  // }, []);
+
+  const handelike = (key) => {
+    const newData = [...data];
+    newData[key].likes = data[key].likes + 1;
+    console.log("new likes", newData[key].likes);
+    setData(newData);
+  };
+  const handeDislike = (id) => {
+    console.log(id);
+    let newArr = [...data];
+    newArr[id].dislikes = newArr[id].dislikes + 1;
+    console.log(newArr[id].dislikes);
+    setData(newArr);
+  };
+
+  const handleDelete = (key) => {
+    const newData = data.filter((item) => item.key !== key);
+    setData(newData);
+  };
 
   const columns = [
     {
@@ -136,14 +154,27 @@ const Display = () => {
       key: "Address"
     },
     {
-      title: "Latitude",
-      dataIndex: "x",
-      key: "lat"
+      title: "Likes",
+      dataIndex: "likes",
+      key: "Likes",
+      editable: true
     },
     {
-      title: "Longitude",
-      dataIndex: "y",
-      key: "lon"
+      title: "Dislikes",
+      dataIndex: "dislikes",
+      key: "Dislikes",
+      editable: true
+    },
+    {
+      title: "Action",
+      key: "action",
+      render: (_, record) => (
+        <Space size="middle">
+          <Button onClick={() => handelike(record.key)}>Like</Button>
+          <Button onClick={() => handeDislike(record.key)}>Dislike</Button>
+          <Button onClick={() => handleDelete(record.key)}>Delete</Button>
+        </Space>
+      )
     }
   ];
 
