@@ -12,17 +12,24 @@
 import React, { Component, useState, useEffect } from "react";
 import { Layout, Button, Typography, Card, Form, Input, Checkbox } from "antd";
 import { Link, useHistory } from "react-router-dom";
-import { auth, registerWithEmailAndPassword, signInWithGoogle } from "../../Firebase/firebase";
+import Iubenda from "react-iubenda-policy";
+
+import {
+  auth,
+  registerWithEmailAndPassword,
+  signInWithGoogle,
+  signInWithGithub,
+  signInWithMicrosoft
+} from "../../Firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { GoogleOutlined } from "@ant-design/icons";
+import Icon, { GoogleOutlined, GithubOutlined } from "@ant-design/icons";
+import logo from "../../assets/Terra.svg";
+import MicrosoftLogo from "../../assets/microsoft.svg";
 
 const { Title } = Typography;
 const { Header, Footer, Content } = Layout;
 
 const SignUp = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
   const [user, loading, error] = useAuthState(auth);
   const navigate = useHistory();
 
@@ -41,10 +48,11 @@ const SignUp = () => {
 
   return (
     <>
-      <div className="layout-default ant-layout layout-sign-up">
+      <div className="layout-default layout-signin">
         <Header>
+          <img src={logo} alt="" width={60} height={60} />
           <div className="header-col header-brand">
-            <h5 style={{ color: "black" }}>CSun | Stolen i solen</h5>
+            <h5>CSun | Stolen i solen</h5>
           </div>
           {/*  */}
         </Header>
@@ -64,13 +72,31 @@ const SignUp = () => {
             title={<h5>Register With</h5>}
             bordered="false"
           >
-            <div className="sign-up-gateways">
-              <GoogleOutlined onClick={signInWithGoogle} style={{ fontSize: "50px", color: "#FF3D00" }} type="primary">
-                Sign up with Google
-              </GoogleOutlined>
-              <Button type="false">{/* <img src={logo1} alt="logo 1" /> */}</Button>
-              <Button type="false">{/* <img src={logo2} alt="logo 2" /> */}</Button>
-              <Button type="false">{/* <img src={logo3} alt="logo 3" /> */}</Button>
+            <div className="sign-up-gateways" style={{ display: "flex", justifyContent: "center" }}>
+              <Button type="false">
+                <GoogleOutlined
+                  onClick={signInWithGoogle}
+                  style={{ fontSize: "50px", color: "#FF3D00" }}
+                  type="primary"
+                />
+              </Button>
+              <Button type="false">
+                <GithubOutlined
+                  onClick={signInWithGithub}
+                  style={{ fontSize: "50px", color: "#0d1117" }}
+                  type="primary"
+                />
+              </Button>
+              <Button type="false">
+                <img
+                  onClick={signInWithMicrosoft}
+                  style={{ fontSize: "50px", color: "#0d1117" }}
+                  src={MicrosoftLogo}
+                  alt="logo 1"
+                  width={100}
+                  height={100}
+                />
+              </Button>
             </div>
             <p className="text-center my-25 font-semibold text-muted">Or</p>
             <Form
@@ -93,9 +119,9 @@ const SignUp = () => {
               <Form.Item name="remember" valuePropName="checked">
                 <Checkbox>
                   I agree the{" "}
-                  <a href="#pablo" className="font-bold text-dark">
-                    Terms and Conditions
-                  </a>
+                  <Iubenda id={63072729} type="terms-and-conditions" styling="nostyle">
+                    Terms and conditions
+                  </Iubenda>
                 </Checkbox>
               </Form.Item>
 
@@ -114,6 +140,12 @@ const SignUp = () => {
             </p>
           </Card>
         </Content>
+        <Footer className="footer-signup">
+          <Iubenda id={63072729} />
+          <Iubenda id={63072729} type="terms-and-conditions" styling="nostyle">
+            Terms and conditions
+          </Iubenda>
+        </Footer>
       </div>
     </>
   );

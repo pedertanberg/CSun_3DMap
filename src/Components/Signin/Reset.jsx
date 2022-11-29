@@ -13,17 +13,9 @@ import React, { Component, useState, useEffect } from "react";
 import { Layout, Menu, Button, Row, Col, Typography, Form, Input, Switch } from "antd";
 import sunimg from "../../assets/Spline_Signin.png";
 import { Link, useHistory } from "react-router-dom";
-import {
-  auth,
-  logInWithEmailAndPassword,
-  signInWithGoogle,
-  signInWithGithub,
-  signInWithMicrosoft
-} from "../../Firebase/firebase";
+import { auth, sendPasswordReset } from "../../Firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import logo from "../../assets/Terra.svg";
-import MicrosoftLogo from "../../assets/microsoft.svg";
-import { GoogleOutlined, GithubOutlined } from "@ant-design/icons";
 
 const { Title } = Typography;
 const { Header, Footer, Content } = Layout;
@@ -42,7 +34,7 @@ const SignIn = () => {
 
   const onFinish = (values) => {
     console.log("Success:", values);
-    logInWithEmailAndPassword(values.email, values.password);
+    sendPasswordReset(values.email);
   };
 
   const onFinishFailed = (errorInfo) => {
@@ -53,6 +45,7 @@ const SignIn = () => {
       <Layout className="layout-default layout-signin">
         <Header>
           <img src={logo} alt="" width={60} height={60} />
+
           <div className="header-col header-brand">
             <h5>CSun</h5>
           </div>
@@ -60,30 +53,9 @@ const SignIn = () => {
         <Content className="signin">
           <Row gutter={[24, 0]} justify="space-around">
             <Col xs={{ span: 24, offset: 0 }} lg={{ span: 6, offset: 2 }} md={{ span: 12 }}>
-              <Title className="mb-15">Sign In</Title>
-              <div style={{ display: "flex", justifyContent: "center", marginBottom: "20px", gap: "20px" }}>
-                <GoogleOutlined
-                  onClick={signInWithGoogle}
-                  style={{ fontSize: "50px", color: "#FF3D00" }}
-                  type="primary"
-                />
-                <GithubOutlined
-                  onClick={signInWithGithub}
-                  style={{ fontSize: "50px", color: "#0d1117" }}
-                  type="primary"
-                />
-                <a onClick={signInWithMicrosoft} style={{ border: "none" }}>
-                  <img
-                    style={{ fontSize: "50px", color: "#0d1117" }}
-                    src={MicrosoftLogo}
-                    alt="logo 1"
-                    width={50}
-                    height={50}
-                  />
-                </a>
-              </div>
+              <Title className="mb-15">Reset Password</Title>
               <Title className="font-regular text-muted" level={5}>
-                Enter your email and password to sign in
+                Enter your email to reset password
               </Title>
               <Form onFinish={onFinish} onFinishFailed={onFinishFailed} layout="vertical" className="row-col">
                 <Form.Item
@@ -100,32 +72,11 @@ const SignIn = () => {
                   <Input placeholder="Email" />
                 </Form.Item>
 
-                <Form.Item
-                  className="username"
-                  label="Password"
-                  name="password"
-                  rules={[
-                    {
-                      required: true,
-                      message: "Please input your password!"
-                    }
-                  ]}
-                >
-                  <Input placeholder="Password" />
-                </Form.Item>
-
                 <Form.Item>
                   <Button type="primary" htmlType="submit" style={{ width: "100%" }}>
-                    SIGN IN
+                    Send Password-Reset link
                   </Button>
                 </Form.Item>
-                <p className="font-semibold text-muted">
-                  Forgot your password?{" "}
-                  <Link to="/reset_pwd" className="text-dark font-bold">
-                    Reset
-                  </Link>
-                </p>
-
                 <p className="font-semibold text-muted">
                   Don't have an account?{" "}
                   <Link to="/sign-up" className="text-dark font-bold">

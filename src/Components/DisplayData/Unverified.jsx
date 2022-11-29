@@ -137,7 +137,10 @@ const Display = () => {
       title: "Title",
       dataIndex: "title",
       key: "title",
-      ...getColumnSearchProps("title")
+      filteredValue: searchText ? [searchText] : null,
+      onFilter: (value, record) =>
+        (record.title ? record.title.toLowerCase().includes(value) : null) ||
+        (record.address ? record.address.toLowerCase().includes(value) : null)
     },
     {
       title: "Address",
@@ -175,6 +178,11 @@ const Display = () => {
 
   return (
     <div className="display">
+      <Input
+        placeholder="Search by title, address, postcode or city"
+        allowClear
+        onChange={(value) => setSearchText(value.target.value.toLowerCase())}
+      />
       <Table columns={columns} dataSource={data} />
     </div>
   );

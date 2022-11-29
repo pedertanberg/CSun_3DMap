@@ -15,6 +15,7 @@ import TileLayer from "@arcgis/core/layers/TileLayer";
 import Graphic from "@arcgis/core/Graphic";
 import { shopLocator } from "../../locator";
 // import { coffee } from "../../assets/images";
+import BarPin from "../../assets/bar_pin.png";
 import DaylightViewModel from "@arcgis/core/widgets/Daylight/DaylightViewModel";
 
 import { auth, getMarker, getUnVerified } from "../../Firebase/firebase";
@@ -59,10 +60,10 @@ function App() {
       const view = new SceneView({
         container: mapDiv.current,
         map: webmap,
-        zoom: 3,
+        zoom: 12,
         camera: {
-          position: [10.750764, 59.915925, 70],
-          tilt: 81
+          position: [10.736641, 59.914573, 2000], //70
+          tilt: 50
           // heading: 50
         }
       });
@@ -128,10 +129,10 @@ function App() {
 
       const symbol = {
         type: "picture-marker",
-        url: "https://static.arcgis.com/images/Symbols/Shapes/BluePin1LargeB.png",
-        width: 46,
-        height: 46,
-        yoffset: 23
+        url: "https://www.google.com/maps/vt/icon/name=assets/icons/poi/tactile/pinlet_outline_v4-2-medium.png,assets/icons/poi/tactile/pinlet_v4-2-medium.png,assets/icons/poi/quantum/pinlet/bar_pinlet-2-medium.png&highlight=ea8600,f29900,ffffff?scale=1.25",
+        width: 23,
+        height: 23,
+        yoffset: 11
       };
 
       const searchWidget = new Search({

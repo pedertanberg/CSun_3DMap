@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Breadcrumb, Layout, Menu } from "antd";
-import { Map, Table, FloatButton, Main, SignIn, SignUp, Home, About, Profile } from "./Components";
+import { Map, Table, FloatButton, Main, SignIn, SignUp, Home, About, Profile, ForgotPassword } from "./Components";
 import "./App.css";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -51,8 +51,8 @@ const App = () => {
         {user ? (
           <Main>
             <Route exact path="/Home" component={Home} />
-            <Route exact path="/Map" component={Map} />
-            <Route exact path="/Table" component={Table} />
+            <Route exact path="/KartSimulering" component={Map} />
+            <Route exact path="/Utforsk" component={Table} />
             <Route exact path="/About" component={About} />
             <Route exact path="/Profile" component={Profile} />
             <Redirect from="*" to="/Home" />
@@ -60,7 +60,8 @@ const App = () => {
         ) : (
           <>
             <Route path="/sign-up" exact component={SignUp} />
-            <Route path="/sign-in" exact component={SignIn} />¨
+            <Route path="/sign-in" exact component={SignIn} />
+            <Route path="/reset_pwd" exact component={ForgotPassword} />
             <Redirect from="*" to="/sign-in" />
           </>
         )}

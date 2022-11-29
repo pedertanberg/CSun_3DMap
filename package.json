@@ -19,6 +19,7 @@
     "react-firebase-hooks": "^5.1.1",
     "react-highlight-words": "^0.18.0",
     "react-icons": "^4.6.0",
+    "react-iubenda-policy": "^0.1.1",
     "react-router-dom": "^5.3.0",
     "styled-components": "^5.3.6"
   },

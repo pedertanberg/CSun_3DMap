@@ -2,6 +2,8 @@ import { initializeApp } from "firebase/app";
 import { message } from 'antd';
 import {
   GoogleAuthProvider,
+  GithubAuthProvider,
+  OAuthProvider ,
   getAuth,
   signInWithPopup,
   signInWithEmailAndPassword,
@@ -37,6 +39,9 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 
 const googleProvider = new GoogleAuthProvider();
+const githubProvider = new GithubAuthProvider();
+const mirosoftProvider = new OAuthProvider ('microsoft.com');
+
 
 
 const signInWithGoogle = async () => {
@@ -55,16 +60,61 @@ const signInWithGoogle = async () => {
     }
   } catch (err) {
     console.error(err);
-    alert(err.message);
+    message.error(err.message);
+    // alert(err.message);
   }
 };
+
+const signInWithGithub = async () => {
+  try {
+    const res = await signInWithPopup(auth, githubProvider);
+    const user = res.user;
+    const q = query(collection(db, "users"), where("uid", "==", user.uid));
+    const docs = await getDocs(q);
+    if (docs.docs.length === 0) {
+      await addDoc(collection(db, "users"), {
+        uid: user.uid,
+        name: user.displayName,
+        authProvider: "google",
+        email: user.email,
+      });
+    }
+  } catch (err) {
+    console.error(err);
+    message.error(err.message);
+    // alert(err.message);
+  }
+};
+
+const signInWithMicrosoft = async () => {
+  try {
+    const res = await signInWithPopup(auth, mirosoftProvider);
+    const user = res.user;
+    const q = query(collection(db, "users"), where("uid", "==", user.uid));
+    const docs = await getDocs(q);
+    if (docs.docs.length === 0) {
+      await addDoc(collection(db, "users"), {
+        uid: user.uid,
+        name: user.displayName,
+        authProvider: "google",
+        email: user.email,
+      });
+    }
+  } catch (err) {
+    console.error(err);
+    message.error(err.message);
+    // alert(err.message);
+  }
+};
+
 
 const logInWithEmailAndPassword = async (email, password) => {
   try {
     await signInWithEmailAndPassword(auth, email, password);
   } catch (err) {
     console.error(err);
-    alert(err.message);
+    message.error(err.message);
+    // alert(err.message);
   }
 };
 
@@ -82,17 +132,19 @@ const registerWithEmailAndPassword = async (name, email, password) => {
     });
   } catch (err) {
     console.error(err);
-    alert(err.message);
+    message.error(err.message);
+    // alert(err.message);
   }
 };
 
 const sendPasswordReset = async (email) => {
   try {
     await sendPasswordResetEmail(auth, email);
-    alert("Password reset link sent!");
+    // alert("Password reset link sent!");
+    message.success("Password reset link sent!");
   } catch (err) {
     console.error(err);
-    alert(err.message);
+    message.error(err.message);
   }
 };
 
@@ -119,8 +171,9 @@ const save_Place = async (key, userID, type, value) => {
         message.success("Place Saved");
       }
   } catch (err) {
-    console.error(err);
-    alert(err.message);
+    // console.error(err);
+    message.error(err.message);
+    // alert(err.message);
 
 
     }
@@ -151,7 +204,8 @@ const unsave_place = async (key, userID,type) => { //remember to add type when f
     }
 } catch (err) {
   console.error(err);
-  alert(err.message);
+  message.error(err.message);
+  // alert(err.message);
 
 
   }
@@ -187,6 +241,11 @@ const unsave_place = async (key, userID,type) => { //remember to add type when f
   const data2=[]
   querySnapshot.forEach((doc) => {
     const temp_data = doc.data()
+      if(!temp_data.address && temp_data.title){
+        const url = "https://www.google.com/maps/search/"+temp_data.title.replace(" ","+")
+        temp_data.address = url
+        
+      }
       if(temp_data.user_likes && temp_data.user_likes.length>0 && !temp_data.user_likes.includes(auth.currentUser.uid)){
         temp_data.likes =temp_data.user_likes.length
       }else if(temp_data.user_likes && temp_data.user_likes.length>0 && temp_data.user_likes.includes(auth.currentUser.uid)){
@@ -211,6 +270,7 @@ const unsave_place = async (key, userID,type) => { //remember to add type when f
     const data2=[]
     querySnapshot.forEach((doc) => {
       const temp_data = doc.data()
+      
       if(temp_data.user_likes && temp_data.user_likes.length>0 && !temp_data.user_likes.includes(auth.currentUser.uid)){
         temp_data.likes =temp_data.user_likes.length
       }else if(temp_data.user_likes && temp_data.user_likes.length>0 && temp_data.user_likes.includes(auth.currentUser.uid)){
@@ -288,6 +348,8 @@ export {
   auth,
   db,
   signInWithGoogle,
+  signInWithMicrosoft,
+  signInWithGithub,
   logInWithEmailAndPassword,
   registerWithEmailAndPassword,
   sendPasswordReset,
