@@ -297,6 +297,11 @@ const unsave_place = async (key, userID,type) => { //remember to add type when f
 
     querySnapshot.forEach((doc) => {
       const temp_data = doc.data()
+      if(!temp_data.address && temp_data.title){
+        const url = "https://www.google.com/maps/search/"+temp_data.title.replace(" ","+")
+        temp_data.address = url
+        
+      }
       temp_data.key = doc.id
       temp_data.type = "verified"
       data2.push(temp_data)

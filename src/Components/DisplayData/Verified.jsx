@@ -1,14 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import { SearchOutlined, HeartOutlined, HeartTwoTone } from "@ant-design/icons";
-import { Button, Input, Space, Table, Form, InputNumber, Popconfirm, Checkbox } from "antd";
-import Highlighter from "react-highlight-words";
-import lonlatData from "../../assets/lonlat.json";
+import { Input, Space, Table, Spin, Col, Row } from "antd";
 import { auth, save_Place, getMarker } from "../../Firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 const Display = () => {
   const [user, loading, error] = useAuthState(auth);
-  const [data, setData] = useState(lonlatData);
+  const [data, setData] = useState();
   const [searchText, setSearchText] = useState("");
   const [searchedColumn, setSearchedColumn] = useState("");
   const searchInput = useRef(null);
@@ -79,12 +77,22 @@ const Display = () => {
 
   return (
     <div className="display">
-      <Input
-        placeholder="Search by title"
-        allowClear
-        onChange={(value) => setSearchText(value.target.value.toLowerCase())}
-      />
-      <Table columns={columns} dataSource={[...data]} />
+      {data ? (
+        <>
+          <Input
+            placeholder="Search by title"
+            allowClear
+            onChange={(value) => setSearchText(value.target.value.toLowerCase())}
+          />
+          <Table columns={columns} dataSource={[...data]} />
+        </>
+      ) : (
+        <Row justify="center" align="middle">
+          <Col span={4}>
+            <Spin size="large" />
+          </Col>
+        </Row>
+      )}
     </div>
   );
 };

@@ -7,10 +7,8 @@ import { Link } from "react-router-dom";
 const App = () => (
   <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%" }}>
     {/* <div class="blob white"></div> */}
-    <Link to="/Map">
-      <div href="http://example.com" className="pulsingButton">
-        Finn din solstol
-      </div>
+    <Link to="/KartSimulering">
+      <div className="pulsingButton">Finn din solstol</div>
     </Link>
   </div>
 );

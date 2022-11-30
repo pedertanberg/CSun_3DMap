@@ -6,6 +6,7 @@ const { Panel } = Collapse;
 import { auth, getSavedPlaces, unsave_place } from "../../Firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { HeartTwoTone } from "@ant-design/icons";
+import { UserOutlined } from "@ant-design/icons";
 
 let i;
 const saved_places = [];
@@ -33,7 +34,15 @@ const Profile = () => {
         const hey = (
           <Col span={6} key={i}>
             <Card title={title} bordered={false}>
-              <p>{res[i].address ? res[i].address : "No address"}</p>
+              <p>
+                {res[i].type != "verified" ? (
+                  res[i].address
+                ) : (
+                  <a href={res[i].address} target="_blank" rel="noreferrer">
+                    Finn Adresse
+                  </a>
+                )}
+              </p>
               <HeartTwoTone
                 onClick={() => {
                   unsave_place(res[i].key, user.uid, res[i].type);
@@ -41,14 +50,6 @@ const Profile = () => {
                 }}
                 twoToneColor={"#eb2f96"}
               />
-              {/* <Button
-                onClick={() => {
-                  unsave_place(res[i].key, user.uid, res[i].type);
-                  removeItem(i);
-                }}
-              >
-                Unsave
-              </Button> */}
             </Card>
           </Col>
         );
@@ -71,7 +72,10 @@ const Profile = () => {
   return (
     <>
       <Header className="Profile_Header">
-        <h1>Peder Tanberg Hansen</h1>
+        <h1>
+          {" "}
+          <UserOutlined style={{ color: "#1890ff" }} /> | {user.email}
+        </h1>
       </Header>
       <Content>
         <Collapse defaultActiveKey={["1"]}>

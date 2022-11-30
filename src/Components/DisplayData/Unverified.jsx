@@ -1,16 +1,14 @@
 //functional component which loads data from ../../assets/lonlat.json and displays in antd table
 import React, { useState, useEffect, useRef } from "react";
 import { SearchOutlined, HeartTwoTone } from "@ant-design/icons";
-import { Button, Input, Space, Table, Form, InputNumber, Popconfirm, Typography } from "antd";
+import { Button, Input, Space, Table, Spin, Col, Row } from "antd";
 import Highlighter from "react-highlight-words";
-// import "antd/dist/antd.css";
-import lonlatData from "../../assets/lonlat.json";
 import { auth, save_Place, getUnVerified } from "../../Firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 const Display = () => {
   const [user, loading, error] = useAuthState(auth);
-  const [data, setData] = useState(lonlatData);
+  const [data, setData] = useState();
   const [searchText, setSearchText] = useState("");
   const [searchedColumn, setSearchedColumn] = useState("");
   const searchInput = useRef(null);
@@ -178,12 +176,22 @@ const Display = () => {
 
   return (
     <div className="display">
-      <Input
-        placeholder="Search by title, address, postcode or city"
-        allowClear
-        onChange={(value) => setSearchText(value.target.value.toLowerCase())}
-      />
-      <Table columns={columns} dataSource={data} />
+      {data ? (
+        <>
+          <Input
+            placeholder="Search by title, address, postcode or city"
+            allowClear
+            onChange={(value) => setSearchText(value.target.value.toLowerCase())}
+          />
+          <Table columns={columns} dataSource={[...data]} />
+        </>
+      ) : (
+        <Row justify="center" align="middle">
+          <Col span={4}>
+            <Spin size="large" />
+          </Col>
+        </Row>
+      )}
     </div>
   );
 };
