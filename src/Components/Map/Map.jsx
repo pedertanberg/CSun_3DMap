@@ -299,87 +299,89 @@ function App() {
 
       //___________________END_________________________________________
 
-      //BarDATA PROFFF
-      // BarData.forEach((result) => {
-      //   const obj = {
-      //     address: result.name,
-      //     location: {
-      //       x: result.lon,
-      //       y: result.lat
-      //     },
-      //     attributes: {
-      //       PlaceName: result.name,
-      //       Place_addr: result.original_Address ? result.original_Address : "No address",
-      //       PlaceType: result.BarRest
-      //     },
-      //     extent: {
-      //       xmin: result.lon - 0.0001,
-      //       ymin: result.lat - 0.0001,
-      //       xmax: result.lon + 0.0001,
-      //       ymax: result.lat + 0.0001
-      //     },
-      //     score: 100
-      //   };
-      //   const { attributes, location, extent } = obj;
-      //   const graphic = new Graphic({
-      //     attributes,
-      //     geometry: {
-      //       type: "point",
-      //       ...location
-      //     },
-      //     symbol,
-      //     popupTemplate: {
-      //       title: "{PlaceName}",
-      //       content: "{Place_addr}  <br/> <br/>  {PlaceType}"
-      //     }
-      //   });
-      //   setTimeout(() => {
-      //     view.graphics.add(graphic);
-      //     // view.extent = extent;
-      //   }, 10000);
-      // });
+      if (location.MapProp.city == "Osl") {
+        //BarDATA PROFFF
+        BarData.forEach((result) => {
+          const obj = {
+            address: result.name,
+            location: {
+              x: result.lon,
+              y: result.lat
+            },
+            attributes: {
+              PlaceName: result.name,
+              Place_addr: result.original_Address ? result.original_Address : "No address",
+              PlaceType: result.BarRest
+            },
+            extent: {
+              xmin: result.lon - 0.0001,
+              ymin: result.lat - 0.0001,
+              xmax: result.lon + 0.0001,
+              ymax: result.lat + 0.0001
+            },
+            score: 100
+          };
+          const { attributes, location, extent } = obj;
+          const graphic = new Graphic({
+            attributes,
+            geometry: {
+              type: "point",
+              ...location
+            },
+            symbol,
+            popupTemplate: {
+              title: "{PlaceName}",
+              content: "{Place_addr}  <br/> <br/>  {PlaceType}"
+            }
+          });
+          setTimeout(() => {
+            view.graphics.add(graphic);
+            // view.extent = extent;
+          }, 10000);
+        });
 
-      // getUnVerified().then((results) => {
-      //   // console.log(results);
-      //   results.forEach((result) => {
-      //     const obj = {
-      //       address: result.title,
-      //       location: {
-      //         x: result.lon,
-      //         y: result.lat
-      //       },
-      //       attributes: {
-      //         PlaceName: result.title,
-      //         Place_addr: result.address ? result.address : "No address",
-      //         PlaceType: result.type
-      //       },
-      //       extent: {
-      //         xmin: result.lon - 0.0001,
-      //         ymin: result.lat - 0.0001,
-      //         xmax: result.lon + 0.0001,
-      //         ymax: result.lat + 0.0001
-      //       },
-      //       score: 100
-      //     };
-      //     const { attributes, location, extent } = obj;
-      //     const graphic = new Graphic({
-      //       attributes,
-      //       geometry: {
-      //         type: "point",
-      //         ...location
-      //       },
-      //       symbol,
-      //       popupTemplate: {
-      //         title: "{PlaceName}",
-      //         content: "{Place_addr}  <br/> <br/>  Uverifisert"
-      //       }
-      //     });
-      //     setTimeout(() => {
-      //       view.graphics.add(graphic);
-      //       // view.extent = extent;
-      //     }, 10000);
-      //   });
-      // });
+        // getUnVerified().then((results) => {
+        //   // console.log(results);
+        //   results.forEach((result) => {
+        //     const obj = {
+        //       address: result.title,
+        //       location: {
+        //         x: result.lon,
+        //         y: result.lat
+        //       },
+        //       attributes: {
+        //         PlaceName: result.title,
+        //         Place_addr: result.address ? result.address : "No address",
+        //         PlaceType: result.type
+        //       },
+        //       extent: {
+        //         xmin: result.lon - 0.0001,
+        //         ymin: result.lat - 0.0001,
+        //         xmax: result.lon + 0.0001,
+        //         ymax: result.lat + 0.0001
+        //       },
+        //       score: 100
+        //     };
+        //     const { attributes, location, extent } = obj;
+        //     const graphic = new Graphic({
+        //       attributes,
+        //       geometry: {
+        //         type: "point",
+        //         ...location
+        //       },
+        //       symbol,
+        //       popupTemplate: {
+        //         title: "{PlaceName}",
+        //         content: "{Place_addr}  <br/> <br/>  Uverifisert"
+        //       }
+        //     });
+        //     setTimeout(() => {
+        //       view.graphics.add(graphic);
+        //       // view.extent = extent;
+        //     }, 10000);
+        //   });
+        // });
+      }
     }
   }, []);
 
