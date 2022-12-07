@@ -79,6 +79,8 @@ function App() {
 
       // Create SceneLayer and add to the map
       const sceneLayer = new SceneLayer({
+        minScale: 3000,
+        maxScale: 0,
         portalItem: {
           id: "ca0470dbbddb4db28bad74ed39949e25"
         },
@@ -87,6 +89,8 @@ function App() {
       webmap.add(sceneLayer);
 
       const treeLayer = new SceneLayer({
+        minScale: 3000,
+        maxScale: 0,
         portalItem: {
           id: "33383da8a75f4d24b4b6a0d0532abe6e"
         },
@@ -204,54 +208,6 @@ function App() {
       //   });
       // });
 
-      getMarker().then((results) => {
-        // console.log(results);
-        results.forEach((result) => {
-          const obj = {
-            address: result.title,
-            location: {
-              x: result.lon,
-              y: result.lat
-            },
-            attributes: {
-              PlaceName: result.title,
-              Place_addr: result.address ? result.address : "No address"
-              // PlaceType: result.type
-            },
-            extent: {
-              xmin: result.lon - 0.0001,
-              ymin: result.lat - 0.0001,
-              xmax: result.lon + 0.0001,
-              ymax: result.lat + 0.0001
-            },
-            score: 100
-          };
-          const { attributes, location, extent } = obj;
-          const graphic = new Graphic({
-            attributes,
-            geometry: {
-              type: "point",
-              ...location
-            },
-            symbol: {
-              type: "picture-marker",
-              url: VerifiedPin, //../../assets/MapMarkers/map-marker.png
-              width: 23,
-              height: 23
-            },
-            popupTemplate: {
-              title: "{PlaceName}",
-              content:
-                "<a href={Place_addr} target='_blank' rel='noreferrer'>Finn Adresse</a> <br/> <br/> Verifisert av CSun"
-            }
-          });
-          setTimeout(() => {
-            view.graphics.add(graphic);
-            // view.extent = extent;
-          }, 10000);
-        });
-      });
-
       //RESTDATA PROFFF
       data.forEach((result) => {
         const obj = {
@@ -299,89 +255,137 @@ function App() {
 
       //___________________END_________________________________________
 
-      if (location.MapProp.city == "Osl") {
-        //BarDATA PROFFF
-        BarData.forEach((result) => {
-          const obj = {
-            address: result.name,
-            location: {
-              x: result.lon,
-              y: result.lat
-            },
-            attributes: {
-              PlaceName: result.name,
-              Place_addr: result.original_Address ? result.original_Address : "No address",
-              PlaceType: result.BarRest
-            },
-            extent: {
-              xmin: result.lon - 0.0001,
-              ymin: result.lat - 0.0001,
-              xmax: result.lon + 0.0001,
-              ymax: result.lat + 0.0001
-            },
-            score: 100
-          };
-          const { attributes, location, extent } = obj;
-          const graphic = new Graphic({
-            attributes,
-            geometry: {
-              type: "point",
-              ...location
-            },
-            symbol,
-            popupTemplate: {
-              title: "{PlaceName}",
-              content: "{Place_addr}  <br/> <br/>  {PlaceType}"
-            }
-          });
-          setTimeout(() => {
-            view.graphics.add(graphic);
-            // view.extent = extent;
-          }, 10000);
-        });
+      // if (location.mapProp.city == "Osl") {
+      //   getMarker().then((results) => {
+      //     // console.log(results);
+      //     results.forEach((result) => {
+      //       const obj = {
+      //         address: result.title,
+      //         location: {
+      //           x: result.lon,
+      //           y: result.lat
+      //         },
+      //         attributes: {
+      //           PlaceName: result.title,
+      //           Place_addr: result.address ? result.address : "No address"
+      //           // PlaceType: result.type
+      //         },
+      //         extent: {
+      //           xmin: result.lon - 0.0001,
+      //           ymin: result.lat - 0.0001,
+      //           xmax: result.lon + 0.0001,
+      //           ymax: result.lat + 0.0001
+      //         },
+      //         score: 100
+      //       };
+      //       const { attributes, location, extent } = obj;
+      //       const graphic = new Graphic({
+      //         attributes,
+      //         geometry: {
+      //           type: "point",
+      //           ...location
+      //         },
+      //         symbol: {
+      //           type: "picture-marker",
+      //           url: VerifiedPin, //../../assets/MapMarkers/map-marker.png
+      //           width: 23,
+      //           height: 23
+      //         },
+      //         popupTemplate: {
+      //           title: "{PlaceName}",
+      //           content:
+      //             "<a href={Place_addr} target='_blank' rel='noreferrer'>Finn Adresse</a> <br/> <br/> Verifisert av CSun"
+      //         }
+      //       });
+      //       setTimeout(() => {
+      //         view.graphics.add(graphic);
+      //         // view.extent = extent;
+      //       }, 10000);
+      //     });
+      //   });
 
-        // getUnVerified().then((results) => {
-        //   // console.log(results);
-        //   results.forEach((result) => {
-        //     const obj = {
-        //       address: result.title,
-        //       location: {
-        //         x: result.lon,
-        //         y: result.lat
-        //       },
-        //       attributes: {
-        //         PlaceName: result.title,
-        //         Place_addr: result.address ? result.address : "No address",
-        //         PlaceType: result.type
-        //       },
-        //       extent: {
-        //         xmin: result.lon - 0.0001,
-        //         ymin: result.lat - 0.0001,
-        //         xmax: result.lon + 0.0001,
-        //         ymax: result.lat + 0.0001
-        //       },
-        //       score: 100
-        //     };
-        //     const { attributes, location, extent } = obj;
-        //     const graphic = new Graphic({
-        //       attributes,
-        //       geometry: {
-        //         type: "point",
-        //         ...location
-        //       },
-        //       symbol,
-        //       popupTemplate: {
-        //         title: "{PlaceName}",
-        //         content: "{Place_addr}  <br/> <br/>  Uverifisert"
-        //       }
-        //     });
-        //     setTimeout(() => {
-        //       view.graphics.add(graphic);
-        //       // view.extent = extent;
-        //     }, 10000);
-        //   });
-        // });
-      }
+      //   //BarDATA PROFFF
+      //   BarData.forEach((result) => {
+      //     const obj = {
+      //       address: result.name,
+      //       location: {
+      //         x: result.lon,
+      //         y: result.lat
+      //       },
+      //       attributes: {
+      //         PlaceName: result.name,
+      //         Place_addr: result.original_Address ? result.original_Address : "No address",
+      //         PlaceType: result.BarRest
+      //       },
+      //       extent: {
+      //         xmin: result.lon - 0.0001,
+      //         ymin: result.lat - 0.0001,
+      //         xmax: result.lon + 0.0001,
+      //         ymax: result.lat + 0.0001
+      //       },
+      //       score: 100
+      //     };
+      //     const { attributes, location, extent } = obj;
+      //     const graphic = new Graphic({
+      //       attributes,
+      //       geometry: {
+      //         type: "point",
+      //         ...location
+      //       },
+      //       symbol,
+      //       popupTemplate: {
+      //         title: "{PlaceName}",
+      //         content: "{Place_addr}  <br/> <br/>  {PlaceType}"
+      //       }
+      //     });
+      //     setTimeout(() => {
+      //       view.graphics.add(graphic);
+      //       // view.extent = extent;
+      //     }, 10000);
+      //   });
+
+      //   // getUnVerified().then((results) => {
+      //   //   // console.log(results);
+      //   //   results.forEach((result) => {
+      //   //     const obj = {
+      //   //       address: result.title,
+      //   //       location: {
+      //   //         x: result.lon,
+      //   //         y: result.lat
+      //   //       },
+      //   //       attributes: {
+      //   //         PlaceName: result.title,
+      //   //         Place_addr: result.address ? result.address : "No address",
+      //   //         PlaceType: result.type
+      //   //       },
+      //   //       extent: {
+      //   //         xmin: result.lon - 0.0001,
+      //   //         ymin: result.lat - 0.0001,
+      //   //         xmax: result.lon + 0.0001,
+      //   //         ymax: result.lat + 0.0001
+      //   //       },
+      //   //       score: 100
+      //   //     };
+      //   //     const { attributes, location, extent } = obj;
+      //   //     const graphic = new Graphic({
+      //   //       attributes,
+      //   //       geometry: {
+      //   //         type: "point",
+      //   //         ...location
+      //   //       },
+      //   //       symbol,
+      //   //       popupTemplate: {
+      //   //         title: "{PlaceName}",
+      //   //         content: "{Place_addr}  <br/> <br/>  Uverifisert"
+      //   //       }
+      //   //     });
+      //   //     setTimeout(() => {
+      //   //       view.graphics.add(graphic);
+      //   //       // view.extent = extent;
+      //   //     }, 10000);
+      //   //   });
+      //   // });
+      // }
     }
   }, []);
 
