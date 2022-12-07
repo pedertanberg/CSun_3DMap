@@ -88786,5 +88786,29 @@
         "name": "Bj\u00f8lsen Sushi AS",
         "phone": "22 95 20 00",
         "original_Address": "Sarpsborggata 12 C, 0468 Oslo"
+    },
+    {
+        "ISO_3166-1_alpha-2": "NO",
+        "ISO_3166-1_alpha-3": "NOR",
+        "ISO_3166-2": [
+            "NO-03"
+        ],
+        "_category": "building",
+        "_type": "building",
+        "city": "Oslo",
+        "continent": "Europe",
+        "country": "Denmark",
+        "country_code": "no",
+        "house_number": "12C",
+        "municipality": "Oslo",
+        "postal_city": "Oslo",
+        "postcode": "0468",
+        "road": "Sarpsborggata",
+        "suburb": "Bj\u00f8lsen",
+        "lon": 12.58227229143479,
+        "lat": 55.68155441541816,
+        "name": "Cafe Det Elektriske Hjørnet",
+        "phone": "22 95 20 00",
+        "original_Address": "Store Regnegade 12, 1110 København, Danmark"
     }
 ]

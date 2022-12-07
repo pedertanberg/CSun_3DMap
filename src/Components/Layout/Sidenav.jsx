@@ -64,11 +64,11 @@ function Sidenav({ color }) {
           </NavLink>
         </Menu.Item>
         <Menu.Item key="2">
-          <NavLink to="/KartSimulering">
+          <NavLink to="/Byer">
             <span
               className="icon"
               style={{
-                background: page === "KartSimulering" ? color : ""
+                background: page === "Byer" || page === "KartSimulering" ? color : ""
               }}
             >
               <GlobalOutlined />

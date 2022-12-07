@@ -9,3 +9,4 @@ export {default as Main} from './Layout/Main';
 export {default as Home} from './Home/Home';
 export {default as About} from './About/About';
 export {default as Profile} from './Profile/Profile';
+export {default as Card} from './Map/Main';

@@ -1,6 +1,18 @@
 import React, { useState } from "react";
 import { Breadcrumb, Layout, Menu } from "antd";
-import { Map, Table, FloatButton, Main, SignIn, SignUp, Home, About, Profile, ForgotPassword } from "./Components";
+import {
+  Map,
+  Table,
+  FloatButton,
+  Main,
+  SignIn,
+  SignUp,
+  Home,
+  About,
+  Profile,
+  ForgotPassword,
+  Card
+} from "./Components";
 import "./App.css";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -25,23 +37,6 @@ import { Switch, Route, Redirect } from "react-router-dom";
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-const { Header, Content, Footer } = Layout;
-
-const items = [
-  {
-    key: "/Home",
-    label: "Hjem"
-  },
-  {
-    key: "/Map",
-    label: "Map"
-  },
-  {
-    key: "/Om",
-    label: "Om"
-  }
-];
-
 // Initial
 const App = () => {
   const [user, loading, error] = useAuthState(auth);
@@ -55,6 +50,7 @@ const App = () => {
             <Route exact path="/Utforsk" component={Table} />
             <Route exact path="/About" component={About} />
             <Route exact path="/Profile" component={Profile} />
+            <Route exact path="/Byer" component={Card} />
             <Redirect from="*" to="/Home" />
           </Main>
         ) : (
