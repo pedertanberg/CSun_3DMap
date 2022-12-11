@@ -147,41 +147,6 @@ function App() {
       view.environment.lighting.directShadowsEnabled = true;
       view.environment.lighting.date = today;
 
-      // const routing = new Expand({
-      //   view: view,
-      //   content: new Directions({
-      //     view: view,
-      //     layer: routeLayer
-      //   }),
-      //   group: "top-right",
-      //   expanded: false
-      // });
-      // view.ui.add(routing, { position: "top-right" });
-
-      // const symbol = {
-      //   type: "picture-marker",
-      //   url: "https://www.google.com/maps/vt/icon/name=assets/icons/poi/tactile/pinlet_outline_v4-2-medium.png,assets/icons/poi/tactile/pinlet_v4-2-medium.png,assets/icons/poi/quantum/pinlet/bar_pinlet-2-medium.png&highlight=ea8600,f29900,ffffff?scale=1.25",
-      //   width: 23,
-      //   height: 23,
-      //   yoffset: 11
-      // };
-
-      // const symbol2 = {
-      //   type: "picture-marker",
-      //   url: "https://static.arcgis.com/images/Symbols/Shapes/BluePin1LargeB.png",
-      //   width: 23,
-      //   height: 23,
-      //   yoffset: 11
-      // };
-
-      // const symbol3 = {
-      //   type: "picture-marker",
-      //   url: "https://static.vecteezy.com/system/resources/previews/008/506/390/original/bright-green-tick-checkmark-icon-free-png.png",
-      //   width: 23,
-      //   height: 23,
-      //   yoffset: 11
-      // };
-
       const symbol = {
         type: "picture-marker",
         url: Barpin, //../../assets/MapMarkers/map-marker.png
