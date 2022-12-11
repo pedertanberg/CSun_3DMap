@@ -21,16 +21,19 @@ import Barpin from "../../assets/MapMarkers/map-marker.png";
 import RestPin from "../../assets/MapMarkers/map-marker-rest.png";
 import VerifiedPin from "../../assets/MapMarkers/map-marker_verified.png";
 import { useLocation } from "react-router-dom";
-/*
-trees: 33383da8a75f4d24b4b6a0d0532abe6e
+import CPHDATA from "../../assets/Scraped_Data/Cph.json";
 
-*/
+/**Importing from Geocoder, which again is data from proff */
+import CPHGEO from "../../assets/Geocoder_output/Cph.json";
+import STCKGEO from "../../assets/Geocoder_output/Stck.json";
+import LUNDGEO from "../../assets/Geocoder_output/Lund.json";
+import OSLOGEO from "../../assets/Geocoder_output/OSL_Rest.json";
 
 const data1 = {
-  Osl: { src: RestData, coordinates: [10.736641, 59.914573, 2000] },
-  Cph: { src: RestDataCPH, coordinates: [12.568337, 55.676098, 2000] },
-  Stck: { src: RestDataStck, coordinates: [18.06324, 59.334591, 2000] },
-  Lund: { src: RestDataLund, coordinates: [13.184357, 55.705307, 2000] }
+  Osl: { src: OSLOGEO, coordinates: [10.736641, 59.914573, 2000] },
+  Cph: { src: CPHGEO, coordinates: [12.568337, 55.676098, 2000] },
+  Stck: { src: STCKGEO, coordinates: [18.06324, 59.334591, 2000] },
+  Lund: { src: LUNDGEO, coordinates: [13.184357, 55.705307, 2000] }
 };
 
 esriConfig.apiKey =
@@ -48,6 +51,16 @@ function App() {
   const today = new Date("2022-07-25 15:13:00");
 
   useEffect(() => {
+    if ("geolocation" in navigator) {
+      console.log("Available");
+      navigator.geolocation.getCurrentPosition(function (position) {
+        console.log("Latitude is :", position.coords.latitude);
+        console.log("Longitude is :", position.coords.longitude);
+      });
+    } else {
+      console.log("Not Available");
+    }
+
     if (mapDiv.current) {
       /**
        * Initialize application
@@ -208,28 +221,25 @@ function App() {
       //   });
       // });
 
-      //RESTDATA PROFFF
+      //RESTDATA PROFFF THIS IS FOR CPH ONLY NOW. not commited to github, be aware.
       data.forEach((result) => {
+        const { location, extent, address, score, Name } = result;
         const obj = {
-          address: result.name,
-          location: {
-            x: result.lon,
-            y: result.lat
-          },
-          attributes: {
-            PlaceName: result.name,
-            Place_addr: result.original_Address ? result.original_Address : "No address",
-            PlaceType: result.BarRest
-          },
-          extent: {
-            xmin: result.lon - 0.0001,
-            ymin: result.lat - 0.0001,
-            xmax: result.lon + 0.0001,
-            ymax: result.lat + 0.0001
-          },
-          score: 100
+          address,
+          location,
+          // attributes: {
+          //   PlaceName: result.name,
+          //   Place_addr: result.original_Address ? result.original_Address : "No address",
+          //   PlaceType: result.BarRest
+          // },
+          extent,
+          score
         };
-        const { attributes, location, extent } = obj;
+        const attributes = {
+          PlaceName: Name,
+          Place_addr: address,
+          PlaceType: result.Type
+        };
         const graphic = new Graphic({
           attributes,
           geometry: {
