@@ -21,37 +21,10 @@ function Footer() {
       <Row className="just">
         <Col xs={24} md={12} lg={12}>
           <div className="copyright">
-            CSun | Solen i Stolen © 2022, by
+            CSun | Stolen i solen © 2025, by
             <a href="https://www.tast.tech" className="font-weight-bold" target="_blank">
-              Tast Consulting
+              Peder Tanberg Hansen
             </a>
-            Finn din solstol
-          </div>
-        </Col>
-        <Col xs={24} md={12} lg={12}>
-          <div className="footer-menu">
-            <ul>
-              <li className="nav-item">
-                <a href="https://www.tast.tech" className="nav-link text-muted" target="_blank">
-                  Tast Consulting
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="/about" className="nav-link text-muted" target="_blank">
-                  Om Oss
-                </a>
-              </li>
-              {/* <li className="nav-item">
-                <a href="#pablo" className="nav-link text-muted" target="_blank">
-                  Blog
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#pablo" className="nav-link pe-0 text-muted" target="_blank">
-                  License
-                </a>
-              </li> */}
-            </ul>
           </div>
         </Col>
       </Row>

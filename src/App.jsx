@@ -43,24 +43,16 @@ const App = () => {
   return (
     <div className="App">
       <Switch>
-        {user ? (
+
           <Main>
-            <Route exact path="/Home" component={Home} />
-            <Route exact path="/KartSimulering" component={Map} />
-            <Route exact path="/Utforsk" component={Table} />
+            {/* <Route exact path="/Home" component={Home} /> */}
+            <Route exact path="/Home" component={Map} />
+            {/* <Route exact path="/Utforsk" component={Table} />
             <Route exact path="/About" component={About} />
             <Route exact path="/Profile" component={Profile} />
-            <Route exact path="/Byer" component={Card} />
+            <Route exact path="/Byer" component={Card} /> */}
             <Redirect from="*" to="/Home" />
           </Main>
-        ) : (
-          <>
-            <Route path="/sign-up" exact component={SignUp} />
-            <Route path="/sign-in" exact component={SignIn} />
-            <Route path="/reset_pwd" exact component={ForgotPassword} />
-            <Redirect from="*" to="/sign-in" />
-          </>
-        )}
       </Switch>
     </div>
   );

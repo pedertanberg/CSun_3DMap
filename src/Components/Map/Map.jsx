@@ -42,13 +42,11 @@ esriConfig.apiKey =
 function App() {
   const [user, loading, error] = useAuthState(auth);
   let location = useLocation();
-  const [data, setData] = React.useState(
-    data1[location.mapProp.city].src ? data1[location.mapProp.city].src : RestData
-  );
+  
 
   const mapDiv = useRef(null);
   const routeLayer = new RouteLayer();
-  const today = new Date("2022-07-25 15:13:00");
+  const today = new Date("2025-02-25 15:13:00");
 
   useEffect(() => {
     if ("geolocation" in navigator) {
@@ -71,20 +69,13 @@ function App() {
         layers: [routeLayer]
       });
 
-      // const scenelayer = new SceneLayer({
-      //   portalItem: {
-      //     id: "e337746e9a7442f9a4060d126854689e"
-      //   }
-      // });
 
       const view = new SceneView({
         container: mapDiv.current,
         map: webmap,
         zoom: 12,
         camera: {
-          position: data1[location.mapProp.city].coordinates
-            ? data1[location.mapProp.city].coordinates
-            : [10.736641, 59.914573, 2000], //70  55.68155441541816,12.58227229143479
+          position:  [10.736641, 59.914573, 2000], //70  55.68155441541816,12.58227229143479
           tilt: 50
           // heading: 50
         }
@@ -163,204 +154,7 @@ function App() {
         position: "top-right"
       });
 
-      // shopLocator().then((results) => {
-      //   // console.log(results);
-      //   results.forEach((result) => {
-      //     const { attributes, location, extent } = result;
-      //     const graphic = new Graphic({
-      //       attributes,
-      //       geometry: {
-      //         type: "point",
-      //         ...location
-      //       },
-      //       symbol2,
-      //       popupTemplate: {
-      //         title: "{PlaceName}",
-      //         content: "{Place_addr}"
-      //       }
-      //     });
-      //     setTimeout(() => {
-      //       view.graphics.add(graphic);
-      //       // view.extent = extent;
-      //     }, 10000);
-      //   });
-      // });
 
-      //RESTDATA PROFFF THIS IS FOR CPH ONLY NOW. not commited to github, be aware.
-      data.forEach((result) => {
-        const { location, extent, address, score, Name } = result;
-        const obj = {
-          address,
-          location,
-          // attributes: {
-          //   PlaceName: result.name,
-          //   Place_addr: result.original_Address ? result.original_Address : "No address",
-          //   PlaceType: result.BarRest
-          // },
-          extent,
-          score
-        };
-        const attributes = {
-          PlaceName: Name,
-          Place_addr: address,
-          PlaceType: result.Type
-        };
-        const graphic = new Graphic({
-          attributes,
-          geometry: {
-            type: "point",
-            ...location
-          },
-          symbol: {
-            type: "picture-marker",
-            url: RestPin, //../../assets/MapMarkers/map-marker.png
-            width: 23,
-            height: 23
-          },
-          popupTemplate: {
-            title: "{PlaceName}",
-            content: "{Place_addr}  <br/> <br/>  {PlaceType}"
-          }
-        });
-        setTimeout(() => {
-          view.graphics.add(graphic);
-          // view.extent = extent;
-        }, 10000);
-      });
-
-      //___________________END_________________________________________
-
-      // if (location.mapProp.city == "Osl") {
-      //   getMarker().then((results) => {
-      //     // console.log(results);
-      //     results.forEach((result) => {
-      //       const obj = {
-      //         address: result.title,
-      //         location: {
-      //           x: result.lon,
-      //           y: result.lat
-      //         },
-      //         attributes: {
-      //           PlaceName: result.title,
-      //           Place_addr: result.address ? result.address : "No address"
-      //           // PlaceType: result.type
-      //         },
-      //         extent: {
-      //           xmin: result.lon - 0.0001,
-      //           ymin: result.lat - 0.0001,
-      //           xmax: result.lon + 0.0001,
-      //           ymax: result.lat + 0.0001
-      //         },
-      //         score: 100
-      //       };
-      //       const { attributes, location, extent } = obj;
-      //       const graphic = new Graphic({
-      //         attributes,
-      //         geometry: {
-      //           type: "point",
-      //           ...location
-      //         },
-      //         symbol: {
-      //           type: "picture-marker",
-      //           url: VerifiedPin, //../../assets/MapMarkers/map-marker.png
-      //           width: 23,
-      //           height: 23
-      //         },
-      //         popupTemplate: {
-      //           title: "{PlaceName}",
-      //           content:
-      //             "<a href={Place_addr} target='_blank' rel='noreferrer'>Finn Adresse</a> <br/> <br/> Verifisert av CSun"
-      //         }
-      //       });
-      //       setTimeout(() => {
-      //         view.graphics.add(graphic);
-      //         // view.extent = extent;
-      //       }, 10000);
-      //     });
-      //   });
-
-      //   //BarDATA PROFFF
-      //   BarData.forEach((result) => {
-      //     const obj = {
-      //       address: result.name,
-      //       location: {
-      //         x: result.lon,
-      //         y: result.lat
-      //       },
-      //       attributes: {
-      //         PlaceName: result.name,
-      //         Place_addr: result.original_Address ? result.original_Address : "No address",
-      //         PlaceType: result.BarRest
-      //       },
-      //       extent: {
-      //         xmin: result.lon - 0.0001,
-      //         ymin: result.lat - 0.0001,
-      //         xmax: result.lon + 0.0001,
-      //         ymax: result.lat + 0.0001
-      //       },
-      //       score: 100
-      //     };
-      //     const { attributes, location, extent } = obj;
-      //     const graphic = new Graphic({
-      //       attributes,
-      //       geometry: {
-      //         type: "point",
-      //         ...location
-      //       },
-      //       symbol,
-      //       popupTemplate: {
-      //         title: "{PlaceName}",
-      //         content: "{Place_addr}  <br/> <br/>  {PlaceType}"
-      //       }
-      //     });
-      //     setTimeout(() => {
-      //       view.graphics.add(graphic);
-      //       // view.extent = extent;
-      //     }, 10000);
-      //   });
-
-      //   // getUnVerified().then((results) => {
-      //   //   // console.log(results);
-      //   //   results.forEach((result) => {
-      //   //     const obj = {
-      //   //       address: result.title,
-      //   //       location: {
-      //   //         x: result.lon,
-      //   //         y: result.lat
-      //   //       },
-      //   //       attributes: {
-      //   //         PlaceName: result.title,
-      //   //         Place_addr: result.address ? result.address : "No address",
-      //   //         PlaceType: result.type
-      //   //       },
-      //   //       extent: {
-      //   //         xmin: result.lon - 0.0001,
-      //   //         ymin: result.lat - 0.0001,
-      //   //         xmax: result.lon + 0.0001,
-      //   //         ymax: result.lat + 0.0001
-      //   //       },
-      //   //       score: 100
-      //   //     };
-      //   //     const { attributes, location, extent } = obj;
-      //   //     const graphic = new Graphic({
-      //   //       attributes,
-      //   //       geometry: {
-      //   //         type: "point",
-      //   //         ...location
-      //   //       },
-      //   //       symbol,
-      //   //       popupTemplate: {
-      //   //         title: "{PlaceName}",
-      //   //         content: "{Place_addr}  <br/> <br/>  Uverifisert"
-      //   //       }
-      //   //     });
-      //   //     setTimeout(() => {
-      //   //       view.graphics.add(graphic);
-      //   //       // view.extent = extent;
-      //   //     }, 10000);
-      //   //   });
-      //   // });
-      // }
     }
   }, []);
 

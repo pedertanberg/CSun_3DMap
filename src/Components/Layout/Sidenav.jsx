@@ -55,19 +55,6 @@ function Sidenav({ color }) {
             <span
               className="icon"
               style={{
-                background: page === "Home" ? color : ""
-              }}
-            >
-              <HomeOutlined />
-            </span>
-            <span className="label">Hjem</span>
-          </NavLink>
-        </Menu.Item>
-        <Menu.Item key="2">
-          <NavLink to="/Byer">
-            <span
-              className="icon"
-              style={{
                 background: page === "Byer" || page === "KartSimulering" ? color : ""
               }}
             >
@@ -76,58 +63,7 @@ function Sidenav({ color }) {
             <span className="label">Kart</span>
           </NavLink>
         </Menu.Item>
-        <Menu.Item key="3">
-          <NavLink to="/Utforsk">
-            <span
-              className="icon"
-              style={{
-                background: page === "Utforsk" ? color : ""
-              }}
-            >
-              <UnorderedListOutlined />
-            </span>
-            <span className="label">Utforsk</span>
-          </NavLink>
-        </Menu.Item>
-        <Menu.Item key="4">
-          <NavLink to="/About">
-            <span
-              className="icon"
-              style={{
-                background: page === "About" ? color : ""
-              }}
-            >
-              <InfoCircleOutlined />
-            </span>
-            <span className="label">Om CSun</span>
-          </NavLink>
-        </Menu.Item>
-        <Menu.Item key="6">
-          <NavLink to="/Profile">
-            <span
-              className="icon"
-              style={{
-                background: page === "profile" ? color : ""
-              }}
-            >
-              {profile}
-            </span>
-            <span className="label">Profile</span>
-          </NavLink>
-        </Menu.Item>
-        <Menu.Item key="7" onClick={logout}>
-          <NavLink to="/hello">
-            <span
-              className="icon"
-              style={{
-                background: page === "logout" ? color : ""
-              }}
-            >
-              <LogoutOutlined />
-            </span>
-            <span className="label">Logg ut</span>
-          </NavLink>
-        </Menu.Item>
+        
       </Menu>
     </>
   );

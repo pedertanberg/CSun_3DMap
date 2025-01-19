@@ -66,7 +66,7 @@ function Main({ children }) {
             className={`sider-primary ant-layout-sider-primary ${sidenavType === "#fff" ? "active-route" : ""}`}
             style={{ background: sidenavType }}
           >
-            <Sidenav color={sidenavColor} />
+            {/* <Sidenav color={sidenavColor} /> */}
           </Sider>
         </Layout>
       </Drawer>
