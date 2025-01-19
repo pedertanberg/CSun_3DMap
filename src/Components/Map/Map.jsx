@@ -7,9 +7,7 @@ import SceneView from "@arcgis/core/views/SceneView";
 import Daylight from "@arcgis/core/widgets/Daylight";
 import Search from "@arcgis/core/widgets/Search";
 import RouteLayer from "@arcgis/core/layers/RouteLayer";
-import Graphic from "@arcgis/core/Graphic";
 import DaylightViewModel from "@arcgis/core/widgets/Daylight/DaylightViewModel";
-import Barpin from "../../assets/MapMarkers/map-marker.png";
 
 
 
@@ -113,12 +111,6 @@ function App() {
       view.environment.lighting.directShadowsEnabled = true;
       view.environment.lighting.date = today;
 
-      const symbol = {
-        type: "picture-marker",
-        url: Barpin, //../../assets/MapMarkers/map-marker.png
-        width: 23,
-        height: 23
-      };
 
       const searchWidget = new Search({
         view: view

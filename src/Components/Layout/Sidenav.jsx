@@ -12,7 +12,6 @@
 
 // import { useState } from "react";
 import { Menu, Button } from "antd";
-import { NavLink, useLocation, useHistory } from "react-router-dom";
 import logo from "../../assets/Terra.svg";
 import {
   HomeOutlined,
@@ -22,14 +21,9 @@ import {
   InfoCircleOutlined,
   LogoutOutlined
 } from "@ant-design/icons";
-import { auth, logout } from "../../Firebase/firebase";
-import { useAuthState } from "react-firebase-hooks/auth";
+
 
 function Sidenav({ color }) {
-  const [user, loading, error] = useAuthState(auth);
-  const navigate = useHistory();
-  const { pathname } = useLocation();
-  const page = pathname.replace("/", "");
 
   const profile = [
     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" key={0}>
@@ -51,17 +45,15 @@ function Sidenav({ color }) {
       <hr />
       <Menu theme="light" mode="inline">
         <Menu.Item key="1">
-          <NavLink to="/">
             <span
               className="icon"
               style={{
-                background: page === "Byer" || page === "KartSimulering" ? color : ""
+                background: color
               }}
             >
               <GlobalOutlined />
             </span>
             <span className="label">Kart</span>
-          </NavLink>
         </Menu.Item>
         
       </Menu>
