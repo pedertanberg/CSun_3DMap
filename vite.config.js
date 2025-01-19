@@ -8,7 +8,8 @@ export default defineConfig({
     vitePluginFaviconsInject('./src/assets/Terra.svg'), // change the path accordingly
   ],
   build: {
-    chunkSizeWarningLimit: 2000
+    chunkSizeWarningLimit: 2000,
+    outDir: 'build',
   },
   server: {
     open: true

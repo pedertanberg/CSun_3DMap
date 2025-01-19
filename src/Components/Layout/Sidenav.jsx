@@ -51,7 +51,7 @@ function Sidenav({ color }) {
       <hr />
       <Menu theme="light" mode="inline">
         <Menu.Item key="1">
-          <NavLink to="/Home">
+          <NavLink to="/">
             <span
               className="icon"
               style={{

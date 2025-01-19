@@ -8,33 +8,15 @@ import Daylight from "@arcgis/core/widgets/Daylight";
 import Search from "@arcgis/core/widgets/Search";
 import RouteLayer from "@arcgis/core/layers/RouteLayer";
 import Graphic from "@arcgis/core/Graphic";
-import { shopLocator } from "../../locator";
 import DaylightViewModel from "@arcgis/core/widgets/Daylight/DaylightViewModel";
 import { auth, getMarker, getUnVerified } from "../../Firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import RestData from "../../assets/Scraped_Data/PROFFNO_Rest_scrape.json";
-import BarData from "../../assets/Scraped_Data/PROFFNO_BAR_scrape.json";
-import RestDataCPH from "../../assets/Scraped_Data/ProffDK_hoved_Rest.json";
-import RestDataStck from "../../assets/Scraped_Data/ProffSE_Stck_Rest.json";
-import RestDataLund from "../../assets/Scraped_Data/ProffSE_Lnd_Rest.json";
 import Barpin from "../../assets/MapMarkers/map-marker.png";
-import RestPin from "../../assets/MapMarkers/map-marker-rest.png";
-import VerifiedPin from "../../assets/MapMarkers/map-marker_verified.png";
 import { useLocation } from "react-router-dom";
-import CPHDATA from "../../assets/Scraped_Data/Cph.json";
 
-/**Importing from Geocoder, which again is data from proff */
-import CPHGEO from "../../assets/Geocoder_output/Cph.json";
-import STCKGEO from "../../assets/Geocoder_output/Stck.json";
-import LUNDGEO from "../../assets/Geocoder_output/Lund.json";
-import OSLOGEO from "../../assets/Geocoder_output/OSL_Rest.json";
 
-const data1 = {
-  Osl: { src: OSLOGEO, coordinates: [10.736641, 59.914573, 2000] },
-  Cph: { src: CPHGEO, coordinates: [12.568337, 55.676098, 2000] },
-  Stck: { src: STCKGEO, coordinates: [18.06324, 59.334591, 2000] },
-  Lund: { src: LUNDGEO, coordinates: [13.184357, 55.705307, 2000] }
-};
+
+
 
 esriConfig.apiKey =
   "AAPKfc0209af11d3434bbf0799554f377d1dACO76XRtjlavzo6uvi6tHkQ6lGLr_cixp79m4dHK00DGYykDGt2L19cTUeSICw4K";
@@ -75,7 +57,7 @@ function App() {
         map: webmap,
         zoom: 12,
         camera: {
-          position:  [10.736641, 59.914573, 2000], //70  55.68155441541816,12.58227229143479
+          position:  [10.1212513446808, 61.4489785202556, 1000], //70  55.68155441541816,12.58227229143479
           tilt: 50
           // heading: 50
         }
