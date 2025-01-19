@@ -7,8 +7,6 @@ import { getAnalytics } from "firebase/analytics";
 import "./assets/styles/main.css";
 import "./assets/styles/responsive.css";
 import "antd/dist/reset.css";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "./Firebase/firebase";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDtTw4bSJgZ1UEryWnowhv1WTmg0qD-o18",
@@ -25,7 +23,6 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
 const App = () => {
-  const [user, loading, error] = useAuthState(auth);
   
   return (
     <div className="App">

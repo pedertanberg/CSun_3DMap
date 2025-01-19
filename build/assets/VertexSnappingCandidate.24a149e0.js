@@ -1,1 +1,0 @@
-import{n as e,j as o,a as n}from"./DimensionAnalysisView3D.8608d511.js";class i extends e{constructor(t){super({...t,constraint:new o(t.coordinateHelper,t.targetPoint)})}get hints(){return[new n(this.targetPoint,this.elevationInfo,this.domain)]}}export{i as o};

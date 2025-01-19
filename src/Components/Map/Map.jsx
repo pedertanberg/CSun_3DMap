@@ -9,10 +9,7 @@ import Search from "@arcgis/core/widgets/Search";
 import RouteLayer from "@arcgis/core/layers/RouteLayer";
 import Graphic from "@arcgis/core/Graphic";
 import DaylightViewModel from "@arcgis/core/widgets/Daylight/DaylightViewModel";
-import { auth, getMarker, getUnVerified } from "../../Firebase/firebase";
-import { useAuthState } from "react-firebase-hooks/auth";
 import Barpin from "../../assets/MapMarkers/map-marker.png";
-import { useLocation } from "react-router-dom";
 
 
 
@@ -22,10 +19,6 @@ esriConfig.apiKey =
   "AAPKfc0209af11d3434bbf0799554f377d1dACO76XRtjlavzo6uvi6tHkQ6lGLr_cixp79m4dHK00DGYykDGt2L19cTUeSICw4K";
 
 function App() {
-  const [user, loading, error] = useAuthState(auth);
-  let location = useLocation();
-  
-
   const mapDiv = useRef(null);
   const routeLayer = new RouteLayer();
   const today = new Date("2025-02-25 15:13:00");
